@@ -18,14 +18,14 @@
 </head>
 <body>
 
-	<nav class="supervisor_nav">
-		<ul>
-			<li><a class="navLink" href="${cpath}/menu_list.do">상품관리</a></li>
-			<li><a class="navLink" href="supervisor_MM.do">회원관리</a></li>
-			<li><a class="navLink" href="supervisor_Emp.do">하위 관리자 관리</a></li>
-			<li><a class="navLink" href="supervisor_Stat.do">판매량 통계</a></li>
-		</ul>
-	</nav>
+	<nav class="supervisor_nav" >
+        <ul>
+             <li><a class="navLink" href="${cpath}/menu_list.do">상품관리</a></li>
+             <li><a class="navLink" href="supervisor_2_MM">회원관리</a></li>
+             <li><a class="navLink" href="supervisor_3_Emp.do">하위 관리자 관리</a></li>
+             <li><a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a></li>
+        </ul>
+    </nav>
 
 	<form action="${cpath}/menu_categorized_result.do" method="get">
         <select name="menu_category" id="menu_category">
