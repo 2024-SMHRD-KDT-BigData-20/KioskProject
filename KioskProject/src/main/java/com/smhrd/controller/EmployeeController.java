@@ -7,56 +7,56 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.smhrd.entity.Worker;
-import com.smhrd.mapper.WorkerMapper;
+import com.smhrd.entity.Employee;
+import com.smhrd.mapper.EmployeeMapper;
 
 @Controller
-public class WorkerController {
+public class EmployeeController {
 
 	@Autowired
-	private WorkerMapper w_mapper;
+	private EmployeeMapper e_mapper;
 	
 	
 	// 관리자 로그인 페이지 이동
-	@RequestMapping("/worker_initial.do")
-	public void worker_initial(HttpServletRequest request) {}
+	@RequestMapping("/supervisor_0_initial.do")
+	public void supervisor_0_initial(HttpServletRequest request) {}
 	
 	// 상품 관리 페이지 이동
-	@RequestMapping("/supervisor_PM.do")
-	public void supervisor_PM(HttpServletRequest request) {}
+	@RequestMapping("/supervisor_1_PM.do")
+	public void supervisor_1_PM(HttpServletRequest request) {}
 	
 	// 회원 관리 페이지 이동
-	@RequestMapping("/supervisor_MM.do")
-	public void supervisor_MM(HttpServletRequest request) {}
+	@RequestMapping("/supervisor_2_MM.do")
+	public void supervisor_2_MM(HttpServletRequest request) {}
 	
 	// 직원 관리 페이지 이동
-	@RequestMapping("/supervisor_Emp.do")
-	public void supervisor_Emp(HttpServletRequest request) {}
+	@RequestMapping("/supervisor_3_Emp.do")
+	public void supervisor_3_Emp(HttpServletRequest request) {}
 	
 	// 판매량 통계 페이지 이동
-	@RequestMapping("/supervisor_Stat.do")
-	public void supervisor_Stat(HttpServletRequest request) {}
+	@RequestMapping("/supervisor_4_Stat.do")
+	public void supervisor_4_Stat(HttpServletRequest request) {}
 	
 	
 	
 	// 관리자 로그인 메소드
-	@RequestMapping("/worker_login.do")
-	public String worker_login(Worker worker, HttpSession session) {
+	@RequestMapping("/emp_login.do")
+	public String emp_login(Employee employee, HttpSession session) {
 			
-		Worker logined_worker = w_mapper.worker_login();
-		session.setAttribute("logined_worker", logined_worker);
+		Employee logined_emp = e_mapper.emp_login();
+		session.setAttribute("logined_emp", logined_emp);
 			
-		return "supervisor_main";
+		return "supervisor_0_main";
 	}
 	
 		
 	// 관리자 로그아웃
-	@RequestMapping("/worker_logout.do")
-	public String worker_logout(HttpSession session) {
+	@RequestMapping("/emp_logout.do")
+	public String emp_logout(HttpSession session) {
 			
-		session.removeAttribute("logined_worker");
+		session.removeAttribute("logined_emp");
 			
-		return "worker_initial";
+		return "supervisor_0_initial";
 	}
 	
 	

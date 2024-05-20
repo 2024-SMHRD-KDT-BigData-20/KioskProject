@@ -9,9 +9,9 @@
 <body>
 	<div class="login">
 		<h2>Login</h2>
-		<form action="${cpath }/worker_login.do" method="post">
-			<input type="text" name="work_id">
-			<input type="password" name="work_pw">
+		<form action="${cpath }/emp_login.do" method="post">
+			<input type="text" name="emp_id">
+			<input type="password" name="emp_pw">
 			<input type="submit" value="로그인">
 		</form>
 	</div>

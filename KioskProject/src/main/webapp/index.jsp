@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<c:redirect url="worker_initial.do" />
+<c:redirect url="supervisor_0_initial.do" />
 
 </body>
 </html>
