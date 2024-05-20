@@ -5,6 +5,9 @@
 <html>
 <head>
 <title>Home</title>
+
+<link rel="stylesheet" href="<c:url value='/resources/css/style0.css' />">
+
 </head>
 <body>
 	<div class="login">
