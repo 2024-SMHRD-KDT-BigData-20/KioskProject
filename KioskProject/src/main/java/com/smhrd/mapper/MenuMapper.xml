@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.MenuMapper">
+    
+    <!-- 메뉴 목록 로딩-->
+    <select id="menu_list" resultType="com.smhrd.entity.Menu">
+        select * from menu
+    </select>
+    
+    <!-- 메뉴 등록 -->
+    <insert id="menu_insert" parameterType="com.smhrd.entity.Menu">
+        insert into menu (menu_name_eng, menu_name_kor, menu_category, menu_price)
+		values (#{menu_name_eng}, #{menu_name_kor}, #{menu_category}, #{menu_price})
+    </insert>
+    
+    <!-- 메뉴 하나 로딩 -->
+    <select id="menu_select_one" parameterType="int" resultType="com.smhrd.entity.Menu">
+        select * from menu where menu_idx=#{menu_idx}
+    </select>
+    
+    <!-- 메뉴 수정 -->
+    <update id="menu_update" parameterType="com.smhrd.entity.Menu">
+        update menu
+        set menu_name_eng=#{menu_name_eng}, menu_name_kor=#{menu_name_kor}, menu_category=#{menu_category}, menu_price=#{menu_price}
+        where menu_idx=#{menu_idx}
+    </update>
+    
+    <!-- 메뉴 삭제 -->
+    <delete id="menu_delete" parameterType="int">
+        delete from menu
+        where menu_idx=#{menu_idx}
+    </delete>
+    
+    <!-- 메뉴 검색 -->
+    <select id="menu_search" resultType="com.smhrd.entity.Menu">
+        <!-- MySQL 방식 -->
+        select * from menu
+    	where LOWER(menu_name_eng) like CONCAT('%', LOWER(#{menu_search_text}), '%')
+       	   or menu_name_kor like CONCAT('%', #{menu_search_text}, '%')    	   
+        <!-- Oracle 방식
+        select * from menu
+        where menu_name_eng like '%'||#{menu_search_text}||'%'
+           or menu_name_kor like '%'||#{menu_search_text}||'%' -->
+    </select>
+    
+    <!-- 메뉴 카테고리 -->
+    <select id="menu_distinct_category" resultType="String">
+    	select distinct menu_category from menu
+	</select>
+	
+    <!-- 특정 카테고리의 메뉴만 로딩 -->
+    <select id="menu_categorize" parameterType="String" resultType="com.smhrd.entity.Menu">
+    	select * from menu
+    	where menu_category = #{menu_category}
+	</select>
+
+</mapper>
