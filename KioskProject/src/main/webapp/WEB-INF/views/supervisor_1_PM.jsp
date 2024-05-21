@@ -17,14 +17,13 @@
 <script type="text/javascript">var cpath = "${cpath}";</script>
 </head>
 <body>
-
-	<nav class="supervisor_nav" >
-        <ul>
-             <li><a class="navLink" href="${cpath}/menu_list.do">상품관리</a></li>
-             <li><a class="navLink" href="supervisor_2_MM">회원관리</a></li>
-             <li><a class="navLink" href="supervisor_3_Emp.do">하위 관리자 관리</a></li>
-             <li><a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a></li>
-        </ul>
+	<a href="supervisor_0_initial.do">로그아웃</a>
+	<a href="supervisor_0_main.do"><img src="logo2.png" alt="메인으로 이동"></a>
+	<nav class="supervisor_nav">
+             <a class="navLink" href="${cpath}/menu_list.do">상품관리</a>
+             <a class="navLink" href="supervisor_2_MM.do">회원관리</a>
+             <a class="navLink" href="supervisor_3_Emp.do">하위 관리자 관리</a>
+             <a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a>
     </nav>
 
 	<form action="${cpath}/menu_categorized_result.do" method="get">

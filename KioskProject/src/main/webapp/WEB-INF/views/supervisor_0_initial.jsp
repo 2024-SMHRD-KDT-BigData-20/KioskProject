@@ -11,7 +11,6 @@
 </head>
 <body>
 	<div class="login">
-		<img src=".png" class="logo1" />
 		<form action="${cpath }/emp_login.do" method="post">
 			<input type="text" name="emp_id">
 			<input type="password" name="emp_pw">
