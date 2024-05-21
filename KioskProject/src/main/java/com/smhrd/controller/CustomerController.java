@@ -84,7 +84,7 @@ public class CustomerController {
 	}
 	
 	
-	// 메뉴 검색 후 결과 페이지 반환
+	// 회원 검색 후 결과 페이지 반환
 	// form에서 method="get"으로 전송, 따라서 파라미터 name으로 받아와야 함
 	@RequestMapping("/member_search.do")
 	public String member_search(@RequestParam("member_search_text") String member_search_text, Model model) {

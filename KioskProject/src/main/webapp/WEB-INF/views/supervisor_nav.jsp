@@ -52,8 +52,8 @@
         <ul>
              <li><a class="navLink" href="${cpath}/menu_list.do">상품관리</a></li>
              <li><a class="navLink" href="${cpath}/member_list.do">회원관리</a></li>
-             <li><a class="navLink" href="supervisor_3_Emp.do">하위 관리자 관리</a></li>
-             <li><a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a></li>
+             <li><a class="navLink" href="${cpath}/emp_list.do">하위 관리자 관리</a></li>
+             <li><a class="navLink" href="./supervisor_4_Stat.jsp">판매량 통계</a></li>
         </ul>
     </nav>
 </body>
