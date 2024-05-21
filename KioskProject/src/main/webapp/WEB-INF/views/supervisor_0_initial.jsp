@@ -6,12 +6,12 @@
 <head>
 <title>Home</title>
 
-<link rel="stylesheet" href="<c:url value='/resources/css/style0.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
 
 </head>
 <body>
 	<div class="login">
-		<h2>Login</h2>
+		<img src=".png" class="logo1" />
 		<form action="${cpath }/emp_login.do" method="post">
 			<input type="text" name="emp_id">
 			<input type="password" name="emp_pw">
