@@ -3,15 +3,18 @@ function go_insert_menu_form() {
     location.href = cpath + "/menu_insert_form.do";
 }
 
+
 // 메뉴 수정 폼으로 이동
 function go_update_menu_form(menu_idx) {
     location.href = cpath + "/menu_update_form.do/" + menu_idx;
 }
 
+
 // 메뉴 삭제 메소드로 이동
 function go_delete_menu_method(menu_idx) {            
     location.href = cpath + "/menu_delete.do/" + menu_idx;
 }
+
 
 // 카테고리 distinct 값들 로딩
 function show_categories() {

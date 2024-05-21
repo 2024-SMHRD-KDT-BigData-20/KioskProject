@@ -28,7 +28,7 @@
 			<option value="내림차순">내림차순</option>
         </select>
     </form>
-	
+
 	<div class="search">
 		<form action="${cpath }/member_search.do" method="get">
 			<input type="text" name="member_search_text" placeholder="회원 TEL 검색">

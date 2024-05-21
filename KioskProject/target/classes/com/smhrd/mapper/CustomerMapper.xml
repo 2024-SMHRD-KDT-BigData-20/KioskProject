@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.CustomerMapper">
+    
+    <!-- 회원 목록 로딩-->
+    <select id="member_list" resultType="com.smhrd.entity.Customer">
+        select * from customer
+    </select>
+    
+    <!-- 회원 등록 -->
+    <insert id="member_insert" parameterType="com.smhrd.entity.Customer">
+        insert into customer (cust_phone)
+		values (#{cust_phone})
+    </insert>
+    
+    <!-- 회원 삭제 -->
+    <delete id="member_delete" parameterType="long">
+        delete from customer
+        where cust_idx=#{cust_idx}
+    </delete>
+    
+    <!-- 회원 하나 로딩 -->
+    <select id="member_select_one" parameterType="long" resultType="com.smhrd.entity.Customer">
+        select * from customer where cust_idx=#{cust_idx}
+    </select>
+    
+    <!-- 회원 수정 -->
+    <update id="member_update" parameterType="com.smhrd.entity.Customer">
+        update customer
+        set cust_phone=#{cust_phone}, cust_stamp=#{cust_stamp}, cust_ages=#{cust_ages}
+        where cust_idx=#{cust_idx}
+    </update>
+     
+    <!-- 회원 가입일 기준 오름차순 정렬 -->
+    <select id="member_order_by_date_asc" resultType="com.smhrd.entity.Customer">
+    	select * from customer order by joined_at asc
+	</select>
+    
+    <!-- 회원 가입일 기준 내림차순 정렬 -->
+    <select id="member_order_by_date_desc" resultType="com.smhrd.entity.Customer">
+    	select * from customer order by joined_at desc
+	</select>
+	
+    <!-- 회원 TEL 검색 -->
+    <select id="member_search" resultType="com.smhrd.entity.Customer">
+        select * from customer
+    	where cust_phone like CONCAT('%', #{member_search_text}, '%')
+    </select>
+    
+    
+</mapper>

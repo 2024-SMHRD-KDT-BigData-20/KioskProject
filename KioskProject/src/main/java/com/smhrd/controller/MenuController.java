@@ -62,7 +62,7 @@ public class MenuController {
 	
 	// 메뉴 삭제
 	@RequestMapping("/menu_delete.do/{menu_idx}")
-	public String boardDelete(@PathVariable("menu_idx") int menu_idx) {
+	public String menu_delete(@PathVariable("menu_idx") int menu_idx) {
 		m_mapper.menu_delete(menu_idx);
 		return "redirect:/menu_list.do"; 
 	}
