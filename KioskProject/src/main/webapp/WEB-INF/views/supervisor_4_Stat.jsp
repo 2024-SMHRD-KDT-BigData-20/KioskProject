@@ -14,6 +14,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
     <nav class="supervisor_nav" >
         <ul>
              <li><a class="navLink" href="${cpath}/menu_list.do">상품관리</a></li>
@@ -22,6 +23,10 @@
              <li><a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a></li>
         </ul>
     </nav>
+=======
+<!-- 헤더 -->
+<%@ include file="supervisor_nav.jsp"%>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject.git
     
 </body>
 </html>

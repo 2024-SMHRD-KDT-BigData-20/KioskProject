@@ -17,16 +17,9 @@
 <script type="text/javascript">var cpath = "${cpath}";</script>
 </head>
 <body>
-	<a class = "logout" href="supervisor_0_initial.do">로그아웃</a>
-	<a href="supervisor_0_main.do">
-		<img src="logo2.png" alt="메인으로 이동">
-	</a>
-	<nav class="supervisor_nav">
-             <a class="navLink" href="${cpath}/menu_list.do">상품관리</a>
-             <a class="navLink" href="supervisor_2_MM.do">회원관리</a>
-             <a class="navLink" href="supervisor_3_Emp.do">하위 관리자 관리</a>
-             <a class="navLink" href="supervisor_4_Stat.do">판매량 통계</a>
-    </nav>
+
+<!-- 헤더 -->
+<%@ include file="supervisor_nav.jsp"%>
 
 	<form action="${cpath}/menu_categorized_result.do" method="get">
         <select name="menu_category" id="menu_category">

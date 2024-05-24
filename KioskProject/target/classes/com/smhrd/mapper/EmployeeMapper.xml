@@ -6,5 +6,40 @@
     <select id="emp_login" parameterType="com.smhrd.entity.Employee" resultType="com.smhrd.entity.Employee">
         select * from employee where emp_id=#{emp_id} and emp_pw=#{emp_pw}
     </select>
+    
+    <!-- 관리자 목록 로딩-->
+    <select id="emp_list" resultType="com.smhrd.entity.Employee">
+        select * from employee
+    </select>
+    
+    <!-- 직원 등록 -->
+    <insert id="emp_insert" parameterType="com.smhrd.entity.Employee">
+        insert into employee (emp_name, emp_id, emp_pw, emp_phone, emp_auth)
+		values (#{emp_name}, #{emp_id}, #{emp_pw}, #{emp_phone}, #{emp_auth})
+    </insert>
+    
+    <!-- 직원 하나 로딩 -->
+    <select id="emp_select_one" parameterType="long" resultType="com.smhrd.entity.Employee">
+        select * from employee where emp_idx=#{emp_idx}
+    </select>
+    
+    <!-- 직원 수정(최상위 관리자: 0) -->
+    <update id="emp_update" parameterType="com.smhrd.entity.Employee">
+        update employee
+        set emp_phone=#{emp_name}, emp_id=#{emp_id}, emp_pw=#{emp_pw}, emp_phone=#{emp_phone}, emp_auth=#{emp_auth}
+        where emp_idx=#{emp_idx}
+    </update>
+    
+    <!-- 직원 삭제 -->
+    <delete id="emp_delete" parameterType="long">
+        delete from employee
+        where emp_idx=#{emp_idx}
+    </delete>    
+    
+    <!-- 직원 이름 검색 -->
+    <select id="emp_search" resultType="com.smhrd.entity.Employee">
+        select * from employee
+    	where emp_name like CONCAT('%', #{emp_search_text}, '%')
+    </select>
 
 </mapper>

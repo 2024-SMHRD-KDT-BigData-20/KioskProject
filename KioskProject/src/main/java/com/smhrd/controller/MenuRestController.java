@@ -21,4 +21,6 @@ public class MenuRestController {
 		List<String> menu_categories = m_mapper.menu_distinct_category();
 		return menu_categories;
 	}
+	
+	
 }
