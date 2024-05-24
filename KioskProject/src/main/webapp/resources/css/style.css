@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+a.logout {
+	font-size : 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 
 select {
     position: absolute;
@@ -133,11 +138,11 @@ a {
 }
 
 .board_list .menu_price, .board_list .work_auth, .board_list .mem_stamp {
-    width: 10%;
+    width: 30%;
 }
 
 .board_list .menu_img, .board_list .work_rank, .board_list .mem_date  {
-    width: 20%;
+    width: 30%;
 }
 
 

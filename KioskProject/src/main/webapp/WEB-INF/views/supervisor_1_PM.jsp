@@ -17,8 +17,10 @@
 <script type="text/javascript">var cpath = "${cpath}";</script>
 </head>
 <body>
-	<a href="supervisor_0_initial.do">로그아웃</a>
-	<a href="supervisor_0_main.do"><img src="logo2.png" alt="메인으로 이동"></a>
+	<a class = "logout" href="supervisor_0_initial.do">로그아웃</a>
+	<a href="supervisor_0_main.do">
+		<img src="logo2.png" alt="메인으로 이동">
+	</a>
 	<nav class="supervisor_nav">
              <a class="navLink" href="${cpath}/menu_list.do">상품관리</a>
              <a class="navLink" href="supervisor_2_MM.do">회원관리</a>

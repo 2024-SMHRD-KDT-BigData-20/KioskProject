@@ -6,7 +6,6 @@ body {
   padding: 24px;
   text-align: center;
   background: #FFDC00;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .navLink {
@@ -20,6 +19,6 @@ body {
 
 .navLink:hover {
   background-color: #ffffff;
-  color: #EEA200;
+  color: #000000;
   padding: 24px 10px;
 }
