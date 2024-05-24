@@ -26,7 +26,6 @@
 =======
 <!-- 헤더 -->
 <%@ include file="supervisor_nav.jsp"%>
->>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject.git
     
 </body>
 </html>
