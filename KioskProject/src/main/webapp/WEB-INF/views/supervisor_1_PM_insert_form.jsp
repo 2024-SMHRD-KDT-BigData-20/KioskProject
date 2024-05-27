@@ -15,32 +15,32 @@
 	  <div>
 	    <label for="menu_name_eng">메뉴(영문)</label>
 	    <div>
-	      <input type="text" id="menu_name_eng" name="menu_name_eng">
+	      <input type="text" id="menu_name_eng" name="menu_name_eng" required>
 	    </div>
 	  </div>
 	  <div>
 	    <label for="menu_name_kor">메뉴(한글)</label>
 	    <div>
-	      <input type="text" id="menu_name_kor" name="menu_name_kor">
+	      <input type="text" id="menu_name_kor" name="menu_name_kor" required>
 	    </div>
 	  </div>
 	  <div>
 	    <label for="menu_category">분류</label>
 	    <!-- 나중에 체크박스로 변경해도 좋을 듯 -->
 	    <div>
-	      <input type="text" id="menu_category" name="menu_category">
+	      <input type="text" id="menu_category" name="menu_category" required>
 	    </div>
 	  </div>
 	  <div>
 	    <label for="menu_price">가격</label>
 	    <div>
-	      <input type="text" id="menu_price" name="menu_price">
+	      <input type="text" id="menu_price" name="menu_price" required>
 	    </div>
 	  </div>
 	  <div>
 	    <label for="menu_img">사진</label>
 	    <div>
-	      <input type="file" id="menu_price" name="menu_price">
+	      <input type="file" id="menu_img" name="menu_img" required>
 	    </div>
 	  </div>
 	  <div>
