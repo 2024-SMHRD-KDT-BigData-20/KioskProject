@@ -28,10 +28,10 @@
 		}
 		
 		.navLink:hover {
-		  background-color: #ffffff;
-		  color: #000000;
-		  padding: 24px 10px;
-		} 
+		  border-top: 4px solid #ffffff;
+		  border-bottom: 4px solid #ffffff;
+		  padding: 6px 0; 
+		}
     </style>
 
 </head>

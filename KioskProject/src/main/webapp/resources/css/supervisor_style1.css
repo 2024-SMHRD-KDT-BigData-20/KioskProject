@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+html { overflow-y: scroll; }
+
+body { 
+  background: #ffffff
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding: 22px 10px;
+  padding-bottom: 55px;
+}
+
+#boardlist {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#boardlist thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+
+#boardlist thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+
+#boardlist thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#boardlist tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+#boardlist tbody tr td.lalign {
+  text-align: left;
+}
