@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<form action="${cpath }/menu_insert.do" method="post">
+	<form action="${cpath }/menu_insert.do" method="post" enctype="multipart/form-data">
 	
 	  <div>
 	    <label for="menu_name_eng">메뉴(영문)</label>
@@ -38,12 +38,19 @@
 	    </div>
 	  </div>
 	  <div>
+	    <label for="menu_img">사진</label>
+	    <div>
+	      <input type="file" id="menu_price" name="menu_price">
+	    </div>
+	  </div>
+	  <div>
 	    <div>
 	      <button type="submit">등록</button>
 	    </div>
 	  </div>
 	  
 	</form>
+
 	
 </body>
 </html>
