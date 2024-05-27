@@ -4,13 +4,13 @@
     
     <!-- 메뉴 목록 로딩-->
     <select id="menu_list" resultType="com.smhrd.entity.Menu">
-        select * from menu
+        SELECT * FROM menu
     </select>
     
     <!-- 메뉴 등록 -->
     <insert id="menu_insert" parameterType="com.smhrd.entity.Menu">
-        insert into menu (menu_name_eng, menu_name_kor, menu_category, menu_price)
-		values (#{menu_name_eng}, #{menu_name_kor}, #{menu_category}, #{menu_price})
+        insert into menu (menu_name_eng, menu_name_kor, menu_category, menu_price, menu_img)
+		values (#{menu_name_eng}, #{menu_name_kor}, #{menu_category}, #{menu_price}, #{menu_img})
     </insert>
     
     <!-- 메뉴 하나 로딩 -->
@@ -54,4 +54,8 @@
     	where menu_category = #{menu_category}
 	</select>
 
+    <!-- 특정 메뉴의 이미지만 로딩 
+    <select id="get_menu_image" parameterType="int" resultType="byte[]">
+        SELECT menu_img FROM menu WHERE menu_idx = #{menu_idx}
+    </select> -->
 </mapper>

@@ -24,4 +24,6 @@ public interface MenuMapper {
 	List<String> menu_distinct_category();
 
 	List<Menu> menu_categorize(String menu_category);
+	
+	byte[] get_menu_image(int menu_idx);
 }
