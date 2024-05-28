@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/css/supervisor_style1.css' />">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="<c:url value='/resources/js/supervisor_PM.js' />"></script>
@@ -18,8 +18,10 @@
 <body>
 
 <!-- 헤더 -->
+<a class="logout" href="">로그아웃</a>
 <%@ include file="supervisor_nav.jsp"%>
 
+<div class="container">
 	<form action="${cpath}/menu_categorized_result.do" method="get">
         <select name="menu_category" id="menu_category">
 			<!-- 이 공간에 menu_categories() 함수를 통해 option 태그 삽입 -->
@@ -27,25 +29,28 @@
     </form>
 
 	<div class="search">
-		<form action="${cpath }/menu_search.do" method="get">
-			<input type="text" name="menu_search_text" placeholder="메뉴 검색">
-			<button type="submit">
-			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
+		<form class="search_container" action="${cpath }/menu_search.do" method="get">
+			<input type="text" name="search_bar" placeholder="메뉴 검색">
+			<img class="search_icon"
+					src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
 		</form>
 	</div>
 
-	<div class="board_wrap">
-		<div class="board_list_wrap">
-			<div class="board_list">
-				<div class="top">
-					<div class="menu_idx">번호</div>
-					<div class="menu_category">분류</div>
-					<div class="menu_name_eng">메뉴(영문)</div>
-					<div class="menu_name_kor">메뉴(한글)</div>
-					<div class="menu_price">가격</div>
-					<div class="menu_img">이미지</div>
-				</div>
-
+	<div id="wrapper">
+	<div style="width:100%; height:450px; overflow-y:auto">
+		<table id="boardlist" width="100%" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+            	<tr>
+					<th class="menu_idx"><span>번호</span></th>
+					<th class="menu_category"><span>분류 </span></th>
+					<th class="menu_name_eng"><span>메뉴(영문)</span></th>
+					<th class="menu_name_kor"><span>메뉴(한글)</span></th>
+					<th class="menu_price"><span>가격 </span></th>
+					<th class="menu_img"><span>이미지 </span></th>
+					<th class=""><span></span></th>
+				</tr>
+			</thead>
+			<tbody>
 				<c:forEach items="${menu_search_result }" var="m">
 					<div>
 						<div class="menu_idx">${m.menu_idx }</div>
