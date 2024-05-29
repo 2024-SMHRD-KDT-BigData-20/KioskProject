@@ -28,13 +28,14 @@
         </select>
     </form>
 
-	<div class="search">
+		<div class="search">
 		<form class="search_container" action="${cpath }/menu_search.do" method="get">
-			<input type="text" name="search_bar" placeholder="메뉴 검색">
+			<input type="text" id="search_bar" placeholder="메뉴 검색">
 			<img class="search_icon"
 					src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
 		</form>
 	</div>
+</div>
 
 	<div id="wrapper">
 	<div style="width:100%; height:450px; overflow-y:auto">
@@ -52,7 +53,7 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${menu_search_result }" var="m">
-									<div>
+				<tr>
 						<td class="menu_idx">${m.menu_idx }</td>
 						<td class="menu_category">${m.menu_category }</td>
 						<td class="menu_name_eng">${m.menu_name_eng }</td>
@@ -73,7 +74,6 @@
 				</tr>
 				</c:forEach>
 			</tbody>	
-			</table>
 			</table>
 			</div>
 			</div>

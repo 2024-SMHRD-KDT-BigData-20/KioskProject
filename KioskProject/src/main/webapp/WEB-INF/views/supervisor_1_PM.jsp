@@ -39,6 +39,7 @@
 					src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
 		</form>
 
+		</div>
 	</div>
 
 
@@ -58,7 +59,7 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${menu_list }" var="m">
-				<div>
+				<tr>
 						<td class="menu_idx">${m.menu_idx }</td>
 						<td class="menu_category">${m.menu_category }</td>
 						<td class="menu_name_eng">${m.menu_name_eng }</td>
@@ -76,10 +77,9 @@
 							<a class="delete"
 								href="javascript:go_delete_menu_method('${m.menu_idx}');">삭제</a>
 						</td>
-				</tr>
+					</tr>
 				</c:forEach>
 			</tbody>	
-			</table>
 			</table>
 			</div>
 			</div>
