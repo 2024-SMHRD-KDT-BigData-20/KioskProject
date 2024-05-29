@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<c:set var="userRole" value="${sessionScope.emp_auth}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,17 +49,22 @@
 						<div class="emp_pw">${m.emp_pw }</div>
 						<div class="emp_phone">${m.emp_phone }</div>
 						<div class="emp_auth">${m.emp_auth }</div>
+						<!-- 상위 관리자(권한: 0)일 때 수정, 삭제, 등록 가능 -->
+						<c:if test="${userRole == 0}">
 						<div class="bt_wrap">
-							<a class="modify" href="javascript:go_update_emp_form('${m.emp_idx}');">수정</a> <a
-								class="delete" href="javascript:go_delete_emp_method('${m.emp_idx}');">삭제</a>
+							<a class="modify" href="javascript:go_update_emp_form('${m.emp_idx}');">수정</a>
+							<a class="delete" href="javascript:go_delete_emp_method('${m.emp_idx}');">삭제</a>
 						</div>
+						</c:if>
 					</div>
 				</c:forEach>
 			</div>
 
+			<c:if test="${userRole == 0}">
 			<div class="bt_wrap">
 				<a class="on" href="javascript:go_insert_emp_form();">등록</a>
 			</div>
+			</c:if>
 
 		</div>
 	</div>

@@ -1,15 +1,14 @@
 package com.smhrd.entity;
 
 public class Employee {
-	String emp_idx;
-	String emp_name;
-	String emp_phone;
-	String emp_id;
-	String emp_pw;
-	String emp_auth;
+	private long emp_idx;
+	private String emp_name;
+	private String emp_phone;
+	private String emp_id;
+	private String emp_pw;
+	private int emp_auth;
 	
-	public Employee(String emp_idx, String emp_name, String emp_phone, String emp_id, String emp_pw,
-			String emp_auth) {
+	public Employee(long emp_idx, String emp_name, String emp_phone, String emp_id, String emp_pw, int emp_auth) {
 		super();
 		this.emp_idx = emp_idx;
 		this.emp_name = emp_name;
@@ -29,11 +28,11 @@ public class Employee {
 		this.emp_pw = emp_pw;
 	}
 
-	public String getemp_idx() {
+	public long getemp_idx() {
 		return emp_idx;
 	}
 
-	public void setemp_idx(String emp_idx) {
+	public void setemp_idx(long emp_idx) {
 		this.emp_idx = emp_idx;
 	}
 
@@ -69,11 +68,11 @@ public class Employee {
 		this.emp_pw = emp_pw;
 	}
 
-	public String getemp_auth() {
+	public int getemp_auth() {
 		return emp_auth;
 	}
 
-	public void setemp_auth(String emp_auth) {
+	public void setemp_auth(int emp_auth) {
 		this.emp_auth = emp_auth;
 	}	
 	
