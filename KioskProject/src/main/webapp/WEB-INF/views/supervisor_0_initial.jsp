@@ -6,16 +6,19 @@
 <head>
 <title>Home</title>
 
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/css/initialstyle.css' />">
 
 </head>
 <body>
-	<div class="login">
-		<form action="${cpath }/emp_login.do" method="post">
-			<input type="text" name="emp_id">
-			<input type="password" name="emp_pw">
-			<input type="submit" value="로그인">
+	<div class="wrapper">
+		<div class="container">
+		<h1>관리자 로그인</h1>
+		<form class = form action="${cpath }/emp_login.do" method="post">
+			<input type="text" name="emp_id" placeholder="ID">
+			<input type="password" name="emp_pw" placeholder="PW">
+			<button type="submit" id="login-button">Login</button>
 		</form>
+		</div>
 	</div>
 </body>
 </html>
