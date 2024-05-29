@@ -31,6 +31,8 @@
 				<!-- 이 공간에 menu_categories() 함수를 통해 option 태그 삽입 -->
 			</select>
 		</form>
+		
+		<div class="search">
 		<form class="search_container" action="${cpath }/menu_search.do" method="get">
 			<input type="text" id="search_bar" placeholder="메뉴 검색">
 			<img class="search_icon"
@@ -38,8 +40,6 @@
 		</form>
 
 	</div>
-		
-
 
 
 	<div id="wrapper">
@@ -58,7 +58,7 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${menu_list }" var="m">
-				<tr>
+				<div>
 						<td class="menu_idx">${m.menu_idx }</td>
 						<td class="menu_category">${m.menu_category }</td>
 						<td class="menu_name_eng">${m.menu_name_eng }</td>

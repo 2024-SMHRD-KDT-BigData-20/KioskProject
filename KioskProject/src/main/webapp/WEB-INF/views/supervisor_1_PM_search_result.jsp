@@ -52,26 +52,34 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${menu_search_result }" var="m">
-					<div>
-						<div class="menu_idx">${m.menu_idx }</div>
-						<div class="menu_category">${m.menu_category }</div>
-						<div class="menu_name_eng">${m.menu_name_eng }</div>
-						<div class="menu_name_kor">${m.menu_name_kor }</div>
-						<div class="menu_price">${m.menu_price }</div>
-						<div class="menu_img">${m.menu_name_eng }.jpg</div>
-						<div class="bt_wrap">
-							<a class="modify" href="javascript:go_update_menu_form('${m.menu_idx}');">수정</a> <a
-								class="delete" href="javascript:go_delete_menu_method('${m.menu_idx}');">삭제</a>
-						</div>
-					</div>
+									<div>
+						<td class="menu_idx">${m.menu_idx }</td>
+						<td class="menu_category">${m.menu_category }</td>
+						<td class="menu_name_eng">${m.menu_name_eng }</td>
+						<td class="menu_name_kor">${m.menu_name_kor }</td>
+						<td class="menu_price">${m.menu_price }</td>
+						<td class="menu_img">
+							<c:if test="${m.menu_img != null}">
+								<img src="data:image/jpeg;base64,${m.menuImgBase64}"
+									alt="${m.menu_name_eng}" style="width: 100px; height: 100px;">
+							</c:if>
+						</td>
+						<td class="bt_wrap">
+							<a class="modify"
+								href="javascript:go_update_menu_form('${m.menu_idx}');">수정</a> 
+							<a class="delete"
+								href="javascript:go_delete_menu_method('${m.menu_idx}');">삭제</a>
+						</td>
+				</tr>
 				</c:forEach>
+			</tbody>	
+			</table>
+			</table>
+			</div>
 			</div>
 
 			<div class="bt_wrap">
 				<a class="on" href="javascript:go_insert_menu_form();">등록</a>
 			</div>
-
-		</div>
-	</div>
 </body>
 </html>
