@@ -9,29 +9,29 @@
 
     <style>
        body {
-		  margin: 0px;
+		  margin: 25px 0px 25px;
 		}
 		
 		.supervisor_nav {
-		  padding: 24px;
+		  padding: 18px;
 		  text-align: center;
-		  background: #FFDC00;
+		  background: #dfd3c3;
 		}
 		
 		.navLink {
 		  transition: 0.4s;
-		  color: #ffffff;
-		  font-size: 20px;
+		  color: #000000;
+		  font-size: 18px;
 		  text-decoration: none;
 		  padding: 0 10px;
 		  margin: 0 10px;
 		}
 		
 		.navLink:hover {
-		  background-color: #ffffff;
-		  color: #000000;
-		  padding: 24px 10px;
-		} 
+		  border-top: 4px solid #6c5d53;
+		  border-bottom: 4px solid #6c5d53;
+		  padding: 6px 0; 
+		}
     </style>
 
 </head>
