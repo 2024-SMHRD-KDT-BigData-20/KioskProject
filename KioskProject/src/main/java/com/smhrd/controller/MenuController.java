@@ -41,17 +41,11 @@ public class MenuController {
 		return "supervisor_1_PM_insert_form";
 	}
 
-	/*
-	 * // 메뉴 등록(이미지 없이)
-	 * 
-	 * @RequestMapping("/menu_insert.do") public String menu_insert(Menu menu) {
-	 * m_mapper.menu_insert(menu); return "redirect:/menu_list.do"; }
-	 */
-
 	@RequestMapping(value = "/menu_insert.do", method = RequestMethod.POST)
 	public String menu_insert(@RequestParam("menu_name_eng") String menuNameEng,
 			@RequestParam("menu_name_kor") String menuNameKor, @RequestParam("menu_category") String menuCategory,
-			@RequestParam("menu_price") int menuPrice, @RequestParam("menu_img") MultipartFile file, Model model) {
+			@RequestParam("menu_price") int menuPrice, @RequestParam("menu_img") MultipartFile file,
+			@RequestParam(value = "menu_ages", required = false) String[] menuAges, Model model) {
 
 		try {
 			if (!file.isEmpty()) {
@@ -63,6 +57,13 @@ public class MenuController {
 				menu.setMenu_category(menuCategory);
 				menu.setMenu_price(menuPrice);
 				menu.setMenu_img(bytes);
+
+				if (menuAges != null) {
+					String ages = String.join(",", menuAges); // 배열을 쉼표로 구분된 문자열로 변환
+					menu.setMenu_ages(ages);
+				} else {
+					menu.setMenu_ages("");
+				}
 
 				m_mapper.menu_insert(menu);
 				model.addAttribute("message", "Menu and file uploaded successfully!");
@@ -132,20 +133,20 @@ public class MenuController {
 		return "supervisor_1_PM_search_result";
 	}
 
-    @GetMapping("/menu_image/{menu_idx}")
-    public ResponseEntity<byte[]> getMenuImage(@PathVariable("menu_idx") int menu_idx) {
-        try {
-            byte[] image = m_mapper.get_menu_image(menu_idx);
-            if (image == null) {
-                return ResponseEntity.notFound().build();
-            }
-            HttpHeaders headers = new HttpHeaders();
-            headers.add(HttpHeaders.CONTENT_TYPE, "image/jpeg");
-            return ResponseEntity.ok().headers(headers).body(image);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(500).build();
-        }
-    }
+	@GetMapping("/menu_image/{menu_idx}")
+	public ResponseEntity<byte[]> getMenuImage(@PathVariable("menu_idx") int menu_idx) {
+		try {
+			byte[] image = m_mapper.get_menu_image(menu_idx);
+			if (image == null) {
+				return ResponseEntity.notFound().build();
+			}
+			HttpHeaders headers = new HttpHeaders();
+			headers.add(HttpHeaders.CONTENT_TYPE, "image/jpeg");
+			return ResponseEntity.ok().headers(headers).body(image);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(500).build();
+		}
+	}
 
 }

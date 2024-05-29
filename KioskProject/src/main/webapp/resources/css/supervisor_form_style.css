@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* Overall body styles, fixed positioning and overflow */
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  font-size: 16px; /* Adjusted to standard readable size */
+  color: #333;
+  padding: 22px 10px;
+}
+
+/* Form styles for uniform text inputs and buttons */
+input[type="text"],
+input[type="file"],
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Radio and checkbox enhancements */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Button specifics */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Navigation links, e.g., logout or home */
+a.logout {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Flex container for various elements like search bars */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15%;
+}
+
+/* Search input styles */
+input#search_bar {
+  flex-grow: 1;
+  margin-right: 10px; /* Space between search input and button */
+}
+
+.search_icon {
+  cursor: pointer;
+}
+
+/* Table styling for data presentation */
+#boardlist {
+  width: 75%;
+  margin: 20px auto;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-collapse: collapse;
+  font-size: 0.875em; /* 14px */
+}
+
+#boardlist thead {
+  background-color: #c9dff0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#boardlist thead tr th,
+#boardlist tbody tr td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+#boardlist tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Modifications for responsive alignment issues */
+@media (max-width: 768px) {
+  .container,
+  button,
+  input[type="text"],
+  input[type="file"] {
+    width: 90%; /* Responsive width */
+    margin: auto;
+  }
+}
+
+/* Specific modifications and deletions hover effects */
+.bt_wrap a.modify:hover,
+.bt_wrap a.delete:hover,
+.bt_wrap a.on:hover {
+  opacity: 0.8; /* Subtle hover effect */
+}
