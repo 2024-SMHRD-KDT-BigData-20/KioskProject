@@ -31,7 +31,7 @@
 
 		<div class="search">
 		<form class="search_container" action="${cpath }/menu_search.do" method="get">
-			<input type="text" id="search_bar" placeholder="메뉴 검색">
+			<input type="text" id="search_bar" placeholder="전화번호 검색">
 			<img class="search_icon"
 					src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
 		</form>

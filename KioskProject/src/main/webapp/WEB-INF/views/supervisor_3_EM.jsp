@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/css/supervisor_style1.css' />">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="<c:url value='/resources/js/supervisor_EM.js' />"></script>
@@ -19,54 +19,63 @@
 <body>
 
 <!-- 헤더 -->
+<a class="logout" href="">로그아웃</a>
 <%@ include file="supervisor_nav.jsp"%>
 
-    <div class="search">
-		<form action="${cpath }/emp_search.do" method="get">
-			<input type="text" name="emp_search_text" placeholder="이름 검색">
-			<button type="submit">
-			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
+	<div class="container">
+		<div class="search">
+		<form class="search_container" action="${cpath }/emp_search.do" method="get">
+			<input type="text" id="search_bar" placeholder="이름 검색">
+			<img class="search_icon"
+					src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
 		</form>
+
+		</div>
 	</div>
-
-	<div class="board_wrap">
-		<div class="board_list_wrap">
-			<div class="board_list">
-				<div class="top">
-					<div class="emp_idx">번호</div>
-					<div class="emp_name">이름</div>
-					<div class="emp_id">ID</div>
-					<div class="emp_pw">PW</div>
-					<div class="emp_phone">TEL</div>
-					<div class="emp_auth">권한</div>
-				</div>
-
+	
+	<div id="wrapper">
+	<div style="width:100%; height:450px; overflow-y:auto">
+		<table id="boardlist" width="100%" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+            	<tr>
+					<th class="menu_idx"><span>번호</span></th>
+					<th class="menu_category"><span>이름</span></th>
+					<th class="menu_name_eng"><span>ID</span></th>
+					<th class="menu_name_kor"><span>PW</span></th>
+					<th class="menu_price"><span>TEL </span></th>
+					<th class="menu_img"><span>권한 </span></th>
+					<th class=""><span></span></th>
+				</tr>
+			</thead>
+			<tbody>
 				<c:forEach items="${emp_list }" var="m">
-					<div>
-						<div class="emp_idx">${m.emp_idx }</div>
-						<div class="emp_name">${m.emp_name }</div>
-						<div class="emp_id">${m.emp_id }</div>
-						<div class="emp_pw">${m.emp_pw }</div>
-						<div class="emp_phone">${m.emp_phone }</div>
-						<div class="emp_auth">${m.emp_auth }</div>
+					<tr>
+						<td class="emp_idx">${m.emp_idx }</td>
+						<td class="emp_name">${m.emp_name }</td>
+						<td class="emp_id">${m.emp_id }</td>
+						<td class="emp_pw">${m.emp_pw }</td>
+						<td class="emp_phone">${m.emp_phone }</td>
+						<td class="emp_auth">${m.emp_auth }</td>
 						<!-- 상위 관리자(권한: 0)일 때 수정, 삭제, 등록 가능 -->
 						<c:if test="${userRole == 0}">
-						<div class="bt_wrap">
-							<a class="modify" href="javascript:go_update_emp_form('${m.emp_idx}');">수정</a>
-							<a class="delete" href="javascript:go_delete_emp_method('${m.emp_idx}');">삭제</a>
-						</div>
+						<td class="bt_wrap">
+							<a class="modify"
+								href="javascript:go_update_menu_form('${m.emp_idx}');">수정</a> 
+							<a class="delete"
+								href="javascript:go_delete_menu_method('${m.emp_idx}');">삭제</a>
+						</td>
 						</c:if>
-					</div>
+					</tr>
 				</c:forEach>
+			</tbody>
+			</table>
 			</div>
-
+			
 			<c:if test="${userRole == 0}">
 			<div class="bt_wrap">
 				<a class="on" href="javascript:go_insert_emp_form();">등록</a>
 			</div>
 			</c:if>
 
-		</div>
-	</div>
 </body>
 </html> 

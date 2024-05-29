@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/css/supervisor_style1.css' />">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="<c:url value='/resources/js/supervisor_EM.js' />"></script>
@@ -18,8 +18,10 @@
 <body>
 
 <!-- 헤더 -->
+<a class="logout" href="">로그아웃</a>
 <%@ include file="supervisor_nav.jsp"%>
-
+	
+	<div class="container">
     <div class="search">
 		<form action="${cpath }/emp_search.do" method="get">
 			<input type="text" name="emp_search_text" placeholder="이름 검색">
