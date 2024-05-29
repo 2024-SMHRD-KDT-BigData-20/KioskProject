@@ -10,7 +10,7 @@ import com.smhrd.entity.Employee;
 @Repository
 public interface EmployeeMapper {
 
-	Employee emp_login();
+	Employee emp_login(Employee employee);
 
 	List<Employee> emp_list();
 
