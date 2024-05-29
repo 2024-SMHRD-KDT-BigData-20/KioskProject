@@ -38,12 +38,12 @@
 		<table id="boardlist" width="100%" border="0" cellspacing="0" cellpadding="0">
 			<thead>
             	<tr>
-					<th class="menu_idx"><span>번호</span></th>
-					<th class="menu_category"><span>이름</span></th>
-					<th class="menu_name_eng"><span>ID</span></th>
-					<th class="menu_name_kor"><span>PW</span></th>
-					<th class="menu_price"><span>TEL </span></th>
-					<th class="menu_img"><span>권한 </span></th>
+					<th class="emp_idx"><span>번호</span></th>
+					<th class="emp_name"><span>이름</span></th>
+					<th class="emp_id"><span>ID</span></th>
+					<th class="emp_pw"><span>PW</span></th>
+					<th class="emp_phone"><span>TEL </span></th>
+					<th class="emp_auth"><span>권한 </span></th>
 					<th class=""><span></span></th>
 				</tr>
 			</thead>
@@ -57,25 +57,25 @@
 						<td class="emp_phone">${m.emp_phone }</td>
 						<td class="emp_auth">${m.emp_auth }</td>
 						<!-- 상위 관리자(권한: 0)일 때 수정, 삭제, 등록 가능 -->
-						<c:if test="${userRole == 0}">
+						
 						<td class="bt_wrap">
 							<a class="modify"
-								href="javascript:go_update_menu_form('${m.emp_idx}');">수정</a> 
+								href="javascript:go_update_emp_form('${m.emp_idx}');">수정</a> 
 							<a class="delete"
-								href="javascript:go_delete_menu_method('${m.emp_idx}');">삭제</a>
+								href="javascript:go_delete_emp_method('${m.emp_idx}');">삭제</a>
 						</td>
-						</c:if>
+						
 					</tr>
 				</c:forEach>
 			</tbody>
 			</table>
 			</div>
 			
-			<c:if test="${userRole == 0}">
+			
 			<div class="bt_wrap">
 				<a class="on" href="javascript:go_insert_emp_form();">등록</a>
 			</div>
-			</c:if>
+			</div>
 
 </body>
 </html> 
