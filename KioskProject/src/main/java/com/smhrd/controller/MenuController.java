@@ -1,17 +1,13 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,16 +37,18 @@ public class MenuController {
 		return "supervisor_1_PM_insert_form";
 	}
 
+	// 메뉴 등록
 	@RequestMapping(value = "/menu_insert.do", method = RequestMethod.POST)
 	public String menu_insert(@RequestParam("menu_name_eng") String menuNameEng,
 			@RequestParam("menu_name_kor") String menuNameKor, @RequestParam("menu_category") String menuCategory,
 			@RequestParam("menu_price") int menuPrice, @RequestParam("menu_img") MultipartFile file,
-			@RequestParam(value = "menu_ages", required = false) String[] menuAges, Model model) {
+			@RequestParam(value = "menu_ages[]", required = false) String[] menuAges, Model model) {
 
 		try {
 			if (!file.isEmpty()) {
 				byte[] bytes = file.getBytes();
 				System.out.println("Received file: " + file.getOriginalFilename() + ", size: " + bytes.length);
+				
 				Menu menu = new Menu();
 				menu.setMenu_name_eng(menuNameEng);
 				menu.setMenu_name_kor(menuNameKor);
@@ -60,9 +58,12 @@ public class MenuController {
 
 				if (menuAges != null) {
 					String ages = String.join(",", menuAges); // 배열을 쉼표로 구분된 문자열로 변환
+					System.out.println("menuAges: " + menuAges);
+					System.out.println("ages: " + ages);
 					menu.setMenu_ages(ages);
 				} else {
 					menu.setMenu_ages("");
+					System.out.println("menuAges: " + menuAges);
 				}
 
 				m_mapper.menu_insert(menu);
