@@ -5,11 +5,13 @@
   padding: 0;
   font-weight: 300;
 }
+
 body,
 body ::-webkit-input-placeholder {
   color: #000000;
   font-weight: 300;
 }
+
 .wrapper {
   background: #fff;
   position: absolute;
@@ -19,18 +21,22 @@ body ::-webkit-input-placeholder {
   margin-top: -200px;
   overflow: hidden;
 }
+
 .container {
   margin: 0 auto;
   padding: 80px 0;
   text-align: center;
 }
+
 .container h1 {
   font-size: 40px;
   font-weight: 200;
 }
+
 form {
   padding: 20px 0;
 }
+
 form input {
   appearance: none;
   outline: 0;
@@ -49,11 +55,13 @@ form input {
 form input:hover {
   background-color: rgba(124, 124, 124, 0.214);
 }
+
 form input:focus {
   background-color: white;
   width: 300px;
   color: #000000;
 }
+
 form button {
   appearance: none;
   outline: 0;
@@ -66,8 +74,8 @@ form button {
   cursor: pointer;
   font-size: 18px;
   transition-duration: 0.25s;
-
 }
+
 form button:hover {
   background-color: #5c5c5c;
 }

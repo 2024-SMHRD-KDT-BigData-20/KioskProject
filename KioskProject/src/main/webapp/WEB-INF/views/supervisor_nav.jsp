@@ -15,12 +15,12 @@
 		.supervisor_nav {
 		  padding: 18px;
 		  text-align: center;
-		  background: #dfd3c3;
+		  background: #000;
 		}
 		
 		.navLink {
 		  transition: 0.4s;
-		  color: #000000;
+		  color: #fff;
 		  font-size: 18px;
 		  text-decoration: none;
 		  padding: 0 10px;
@@ -28,8 +28,8 @@
 		}
 		
 		.navLink:hover {
-		  border-top: 4px solid #6c5d53;
-		  border-bottom: 4px solid #6c5d53;
+		  border-top: 4px solid #fff;
+		  border-bottom: 4px solid #fff;
 		  padding: 6px 0; 
 		}
     </style>
