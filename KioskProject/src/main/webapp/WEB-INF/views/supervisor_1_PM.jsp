@@ -22,7 +22,6 @@
 <body>
 
 	<!-- 헤더 -->
-	<a class="logout" href="">로그아웃</a>
 	<%@ include file="supervisor_nav.jsp"%>
 	
 	<div class="container">
@@ -45,7 +44,7 @@
 
 	<div id="wrapper">
 	<div style="width:100%; height:450px; overflow-y:auto">
-		<table id="boardlist" width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table id="boardlist" style='width="100%" border="0" cellspacing="0" cellpadding="0"'>
 			<thead>
             	<tr>
 					<th class="menu_idx"><span>번호</span></th>
