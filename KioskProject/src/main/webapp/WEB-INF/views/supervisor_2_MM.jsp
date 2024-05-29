@@ -18,7 +18,6 @@
 <body>
 
 <!-- 헤더 -->
-<a class="logout" href="">로그아웃</a>
 <%@ include file="supervisor_nav.jsp"%>
 	<div class="container">
 	<form action="${cpath}/member_order_by_date.do" method="get">
