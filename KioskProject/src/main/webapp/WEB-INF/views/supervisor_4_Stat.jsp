@@ -16,7 +16,6 @@
     }
     .left {
         flex: 1;
-        border-right: 1px solid #ccc; /* 오른쪽 경계선 추가 */
         padding: 10px;
     }
     .right {
@@ -33,7 +32,9 @@
 	<div class="container">
         <!-- 왼쪽 콘텐츠 -->
         <div class="left">
-            <jsp:include page="supervisor_sales_statistics.jsp"></jsp:include>
+        <div class="chart-container">
+            <jsp:include page="supervisor_sales_statistics.jsp"></jsp:include>         
+        </div>
         </div>
         
         <!-- 오른쪽 콘텐츠 -->

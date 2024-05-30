@@ -7,8 +7,9 @@ public class MenuReco {
 	private int reco_ages;
 	private int menu_sales;
 	private int total_sales;
+	private String menu_name_kor;
 
-	public MenuReco(int menu_idx, int reco_check, int reco_ages, int menu_sales, int total_sales) {
+	public MenuReco(int menu_idx, int reco_check, int reco_ages, int menu_sales, int total_sales, String menu_name_kor) {
 		super();
 		this.menu_idx = menu_idx;
 		this.reco_check = reco_check;
@@ -17,14 +18,7 @@ public class MenuReco {
 		this.total_sales = total_sales;
 	}
 
-	public MenuReco(int menu_idx, int menu_sales, int total_sales) {
-		super();
-		this.menu_idx = menu_idx;
-		this.menu_sales = menu_sales;
-		this.total_sales = total_sales;
-	}
-
-	public MenuReco(int menu_idx, int total_sales) {
+	public MenuReco(int menu_idx, int total_sales, String menu_name_kor) {
 		super();
 		this.menu_idx = menu_idx;
 		this.total_sales = total_sales;
@@ -72,6 +66,14 @@ public class MenuReco {
 
 	public void setTotal_sales(int total_sales) {
 		this.total_sales = total_sales;
+	}
+
+	public String getMenu_name_kor() {
+		return menu_name_kor;
+	}
+
+	public void setMenu_name_kor(String menu_name_kor) {
+		this.menu_name_kor = menu_name_kor;
 	}
 
 }

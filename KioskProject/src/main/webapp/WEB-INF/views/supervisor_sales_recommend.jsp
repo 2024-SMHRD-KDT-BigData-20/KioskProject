@@ -8,14 +8,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<%-- <link rel="stylesheet" href="<c:url value='/resources/css/supervisor_recoboard_style.css' />"> --%>
 <title>Insert title here</title>
 </head>
 <body>
 
-
 	<div id="wrapper">
-	<div style="width:100%; height:450px; overflow-y:auto">
-		<table id="boardlist" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<div style="height:80vh; width:50vw; overflow-y:auto">
+		<table id="boardlist" style="width: 50vw; border: 0; cellspacing: 0; cellpadding: 0;">
 			<thead>
             	<tr>
 					<th class="menu_idx"><span>번호</span></th>

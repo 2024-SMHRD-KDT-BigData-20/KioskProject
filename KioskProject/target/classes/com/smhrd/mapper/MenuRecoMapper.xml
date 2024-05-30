@@ -4,9 +4,12 @@
     
     <!-- 총 판매량 -->
     <select id="load_sales" resultType="com.smhrd.entity.MenuReco">
-        select menu_idx, sum(menu_sales) as 'total_sales'
-        from menu_reco group by menu_idx
-        order by total_sales desc
+        SELECT m.menu_idx, m.menu_name_kor, SUM(r.menu_sales) AS total_sales
+        FROM menu_reco r
+        JOIN menu m ON r.menu_idx = m.menu_idx
+        GROUP BY m.menu_idx, m.menu_name_kor
+        ORDER BY total_sales DESC
+        LIMIT 10
     </select>
     
     

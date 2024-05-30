@@ -10,7 +10,7 @@ import com.smhrd.entity.MenuReco;
 import com.smhrd.mapper.MenuRecoMapper;
 
 @RestController
-public class StatController {
+public class StatRestController {
 
 	@Autowired
 	private MenuRecoMapper r_mapper;
@@ -21,5 +21,12 @@ public class StatController {
 	public List<MenuReco> load_sales() {
 		List<MenuReco> sales = r_mapper.load_sales();
 		return sales;
+	}
+	
+	// menu_reco 테이블 내용 로딩
+	@GetMapping("/load_reco")
+	public List<String> load_reco() {
+		List<String> reco = r_mapper.load_reco();
+		return reco;
 	}
 }

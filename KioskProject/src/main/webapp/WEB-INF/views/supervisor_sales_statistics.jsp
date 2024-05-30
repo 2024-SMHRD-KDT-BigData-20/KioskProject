@@ -19,9 +19,8 @@
 <body>
 
 	<div>
-		<canvas id="myChart"></canvas>
+		<canvas id="myChart" style="height:80vh; width:50vw"></canvas>
 	</div>
-
 
 	<script type="text/javascript">
 		const ctx = document.getElementById('myChart').getContext('2d');
@@ -36,8 +35,10 @@
 				} ]
 			},
 			options : {
+				indexAxis: 'y', // 막대 차트를 세로로 변경
+				responsive: false,
 				scales : {
-					y : {
+					x : { // y 축이 x 축으로 바뀜
 						beginAtZero : true
 					}
 				}
@@ -63,9 +64,9 @@
 		    var salesData = [];
 
 		    for (var i = 0; i < sales.length; i++) {
-		        labels.push(sales[i].menu_idx); // 'menu_idx'가 라벨이라고 가정
-		        salesData.push(sales[i].total_sales); // 'total_sales'가 데이터라고 가정
-		        console.log(sales[i].menu_idx + ": " + sales[i].total_sales); // 확인용 로그
+		        labels.push(sales[i].menu_name_kor); // 'menu_name_kor'가 라벨
+		        salesData.push(sales[i].total_sales); // 'total_sales'가 데이터
+		        console.log(sales[i].menu_name_kor + ": " + sales[i].total_sales); // 확인용 로그
 		    }
 
 		    myChart.data.labels = labels;
