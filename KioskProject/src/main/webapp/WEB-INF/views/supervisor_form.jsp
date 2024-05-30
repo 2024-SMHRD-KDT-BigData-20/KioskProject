@@ -20,9 +20,6 @@
 
         <div class="wrap">
         	<h3><span>${empty updating_menu ? '상품등록' : '상품수정'}</span></h3>
-                <c:if test="${not empty updating_menu}">
-                    <input type="text" id="menu_category" name="menu_category" value="${updating_menu.menu_category}" required>
-                </c:if>
                 <div class="ctn-inputs radio">
                     <label><input type="radio" class="style-radio" name="menu_category" value="커피">커피</label>
                     <label><input type="radio" class="style-radio" name="menu_category" value="티">티</label>
