@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"
-    href="<c:url value='/resources/css/supervisor_form_style.css' />">
+    href="<c:url value='/resources/css/supervisor_insert_style.css' />">
 </head>
 <body>
 
@@ -20,7 +20,10 @@
 	<div class="wrap">
        <div class= "form">
        <h3><span>회원등록</span></h3>
-	      <input type="text" id="cust_phone" name="cust_phone" placeholder="전화번호" required>
+       <div>
+	   		<label for="cust_phone">전화번호</label>
+	      <input type="text" id="cust_phone" name="cust_phone" required>
+	      </div>
 	    <div>
 	      <button type="submit">등록</button>
 	    </div>

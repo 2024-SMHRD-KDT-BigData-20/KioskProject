@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"
-    href="<c:url value='/resources/css/supervisor_form_style.css' />">
+    href="<c:url value='/resources/css/supervisor_insert_style.css' />">
 </head>
 <body>
     <form action="${cpath}${empty updating_menu ? '/menu_insert.do' : '/menu_update.do'}" method="post"
@@ -34,18 +34,29 @@
                     <label><input type="radio" class="style-radio" name="menu_category" value="푸드">푸드</label>
                 </div>
                 </c:if>
-                <input type="text" id="menu_name_eng" name="menu_name_eng" placeholder="메뉴(영문)" 
+                
+                <div>
+				    <label for="menu_name_eng">메뉴(영문)</label>
+                <input type="text" id="menu_name_eng" name="menu_name_eng" 
                     value="${not empty updating_menu ? updating_menu.menu_name_eng : ''}" required>
-       
-                <input type="text" id="menu_name_kor" name="menu_name_kor" placeholder="메뉴(한글)"
+       			</div>
+       			
+       			<div>
+				    <label for="menu_name_kor">메뉴(한글)</label>
+                <input type="text" id="menu_name_kor" name="menu_name_kor" 
                     value="${not empty updating_menu ? updating_menu.menu_name_kor : ''}" required>
-   
-                <input type="text" id="menu_price" name="menu_price" placeholder="가격" 
+   				</div>
+   				
+   				<div>
+   					<label for="menu_price">가격</label>
+                <input type="text" id="menu_price" name="menu_price"
                     value="${not empty updating_menu ? updating_menu.menu_price : ''}" required>
-
+				</div>
+				
                 <c:if test="${empty updating_menu}">
                     <input type="file" id="menu_img" name="menu_img" required>
                 </c:if>
+          
 
             <div class="checkbox">
                 <c:if test="${empty updating_menu}">

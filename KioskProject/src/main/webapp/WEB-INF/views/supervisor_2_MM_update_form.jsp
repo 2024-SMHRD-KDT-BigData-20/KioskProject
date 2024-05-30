@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"
-    href="<c:url value='/resources/css/supervisor_form_style.css' />">
+    href="<c:url value='/resources/css/supervisor_insert_style.css' />">
 </head>
 <body>
 
@@ -19,12 +19,21 @@
 	<div class="wrap">
        <div class= "form">
        <h3><span>회원정보수정</span></h3>
-	      <input type="text" id="cust_phone" name="cust_phone" value="${updating_member.cust_phone }" placeholder="전화번호">
-	      <input type="text" id="cust_stamp" name="cust_stamp" value="${updating_member.cust_stamp }" placeholder="스탬프" >
-	      <input type="text" id="cust_ages" name="cust_ages" value="${updating_member.cust_ages }" placeholder="인식연령" >
+       <div>
+	   		<label for="cust_phone">전화번호</label>
+	      <input type="text" id="cust_phone" name="cust_phone" value="${updating_member.cust_phone }">
+	   </div>
+	   <div>
+	   		<label for="cust_stamp">스탬프</label>   
+	      <input type="text" id="cust_stamp" name="cust_stamp" value="${updating_member.cust_stamp }">
+	   </div>
+	   <div>
+	   		<label for="cust_ages">인식연령</label>
+	      <input type="text" id="cust_ages" name="cust_ages" value="${updating_member.cust_ages }">
+	   </div>
 	      <button type="submit">수정</button>
-	    </div>
-	  </div>  
+	   </div>
+	 </div>  
 	</form>
 	
 </body>
