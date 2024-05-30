@@ -50,7 +50,7 @@ a.logout {
 		<a class="navLink" href="${cpath}/menu_list.do">상품관리</a> <a
 			class="navLink" href="${cpath}/member_list.do">회원관리</a> <a
 			class="navLink" href="${cpath}/emp_list.do">하위 관리자 관리</a> <a
-			class="navLink" href="./supervisor_4_Stat.jsp">판매량 통계</a> <a
+			class="navLink" href="${cpath}/supervisor_4_Stat.do">판매량 통계</a> <a
 			class="logout" href="${cpath}/emp_logout.do">로그아웃</a>
 	</nav>
 </body>
