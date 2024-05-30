@@ -52,7 +52,7 @@ public class HeaderController {
 		if (logined_emp != null) {
 			session.setAttribute("logined_emp", logined_emp);
 			System.out.println(logined_emp);
-			return "supervisor_0_main";
+			return "redirect:/menu_list.do";
 		} else {
 			return "supervisor_0_initial";
 		}
