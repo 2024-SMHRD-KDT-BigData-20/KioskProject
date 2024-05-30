@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+    href="<c:url value='/resources/css/supervisor_form_style.css' />">
 </head>
 <body>
 
@@ -15,19 +17,15 @@
 	<!-- 등록 시에는 폰 번호만 필요하겠지? -->
 	<!-- 후순위: 전화번호 나타낼 때 '-' 자동 표시 기능 추가 -->
 	<!-- 후순위: 가입일 → 날짜 + 시분까지만 표시 -->
-	  <div>
-	    <label for="cust_phone">TEL</label>
-	    <div>
-	      <input type="text" id="cust_phone" name="cust_phone">
-	    </div>
-	  </div>
-
-	  <div>
+	<div class="wrap">
+       <div class= "form">
+       <h3><span>회원등록</span></h3>
+	      <input type="text" id="cust_phone" name="cust_phone" placeholder="전화번호" required>
 	    <div>
 	      <button type="submit">등록</button>
 	    </div>
 	  </div>
-	  
+	  </div>
 	</form>
 	
 </body>
