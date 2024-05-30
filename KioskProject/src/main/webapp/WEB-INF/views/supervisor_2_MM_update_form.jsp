@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+    href="<c:url value='/resources/css/supervisor_form_style.css' />">
 </head>
 <body>
 
@@ -14,30 +16,15 @@
 	
 	<input type="hidden" value=${updating_member.cust_idx } name="cust_idx">
 	
-	  <div>
-	    <label for="cust_phone">TEL</label>
-	    <div>
-	      <input type="text" id="cust_phone" name="cust_phone" value="${updating_member.cust_phone }" >
-	    </div>
-	  </div>
-	  <div>
-	    <label for="cust_stamp">스탬프</label>
-	    <div>
-	      <input type="text" id="cust_stamp" name="cust_stamp" value="${updating_member.cust_stamp }" >
-	    </div>
-	  </div>
-	  <div>
-	    <label for="cust_ages">인식 연령</label>
-	    <div>
-	      <input type="text" id="cust_ages" name="cust_ages" value="${updating_member.cust_ages }" >
-	    </div>
-	  </div>
-	  <div>
-	    <div>
+	<div class="wrap">
+       <div class= "form">
+       <h3><span>회원정보수정</span></h3>
+	      <input type="text" id="cust_phone" name="cust_phone" value="${updating_member.cust_phone }" placeholder="전화번호">
+	      <input type="text" id="cust_stamp" name="cust_stamp" value="${updating_member.cust_stamp }" placeholder="스탬프" >
+	      <input type="text" id="cust_ages" name="cust_ages" value="${updating_member.cust_ages }" placeholder="인식연령" >
 	      <button type="submit">수정</button>
 	    </div>
-	  </div>
-	  
+	  </div>  
 	</form>
 	
 </body>

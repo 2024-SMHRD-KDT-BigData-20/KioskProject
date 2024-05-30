@@ -40,13 +40,11 @@
                     <input type="text" id="menu_category" name="menu_category" value="${updating_menu.menu_category}" required>
                 </c:if>
                 <c:if test="${empty updating_menu}">
-                    <label><input type="radio" name="menu_category" value="커피">커피</label>
-                    <label><input type="radio" name="menu_category" value="티">티</label>
-                    <label><input type="radio" name="menu_category" value="에이드&주스">에이드&주스</label>
-                    <label><input type="radio" name="menu_category" value="스무디&프라페">스무디&프라페</label>
-                    <label><input type="radio" name="menu_category" value="디카페인">디카페인</label>
-                    <label><input type="radio" name="menu_category" value="음료">음료</label>
-                    <label><input type="radio" name="menu_category" value="푸드">푸드</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="커피">커피</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="디카페인">디카페인</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="음료">음료</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="티">티</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="푸드">푸드</label>
                 </c:if>
             </div>
         </div>
