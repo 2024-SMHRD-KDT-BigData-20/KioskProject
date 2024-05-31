@@ -34,15 +34,17 @@
 
         <div class="wrap">
         	<h3><span>${empty updating_menu ? '상품등록' : '상품수정'}</span></h3>
-                <div class="ctn-inputs radio">
+                <div class = "container">
                 	<label class= "label_tit" for="menu_category">분류</label>
+                <div class="ctn-inputs radio">
                     <label><input type="radio" class="style-radio" name="menu_category" value="커피">커피</label>
                     <label><input type="radio" class="style-radio" name="menu_category" value="티">티</label>
                     <label><input type="radio" class="style-radio" name="menu_category" value="에이드/주스">에이드/주스</label>
-                    <label><input type="radio" class="style-radio" name="menu_category" value="스무디/프라페">스무디/프라페</label>
+                    <label><input type="radio" class="style-radio" name="menu_category" value="스무디/프라페">스무디/프라페</label><br>
                     <label><input type="radio" class="style-radio" name="menu_category" value="디카페인">디카페인</label>
                     <label><input type="radio" class="style-radio" name="menu_category" value="음료">음료</label>
                     <label><input type="radio" class="style-radio" name="menu_category" value="푸드">푸드</label>
+                </div>
                 </div>
                 
                 <div>
@@ -62,7 +64,10 @@
                 <input type="text" id="menu_price" name="menu_price"
                     value="${not empty updating_menu ? updating_menu.menu_price : ''}" required>
 				</div>
+				<div>
+					<label class= "label_tit" for="menu_img">이미지</label>
                     <input type="file" id="menu_img" name="menu_img" required>
+                </div>
           
 
             <div class="checkbox">
@@ -71,7 +76,7 @@
                     <label><input type="checkbox" name="menu_ages[]" value="10">10대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="20">20대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="30">30대</label>
-                    <label><input type="checkbox" name="menu_ages[]" value="40">40대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="40">40대</label><br>
                     <label><input type="checkbox" name="menu_ages[]" value="50">50대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="60">60대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="70">70대</label>
