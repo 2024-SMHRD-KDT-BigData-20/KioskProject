@@ -54,7 +54,7 @@ a.logout {
 	font-size: 15px;
 	position: fixed;
 	top: 20px;
-	right: 20px;
+	right: 50px;
 }
 </style>
 

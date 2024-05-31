@@ -7,6 +7,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+        @font-face {
+            font-family: 'Orbit-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Orbit-Regular', sans-serif;
+        }
+    </style>
 <link rel="stylesheet"
     href="<c:url value='/resources/css/supervisor_insert_style.css' />">
 </head>
@@ -18,16 +30,14 @@
 	<!-- 후순위: 전화번호 나타낼 때 '-' 자동 표시 기능 추가 -->
 	<!-- 후순위: 가입일 → 날짜 + 시분까지만 표시 -->
 	<div class="wrap">
-       <div class= "form">
        <h3><span>회원등록</span></h3>
        <div>
-	   		<label for="cust_phone">전화번호</label>
+	   		<label class= "label_tit" for="cust_phone">전화번호</label>
 	      <input type="text" id="cust_phone" name="cust_phone" required>
 	      </div>
 	    <div>
 	      <button type="submit">등록</button>
 	    </div>
-	  </div>
 	  </div>
 	</form>
 	
