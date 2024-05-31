@@ -8,14 +8,26 @@
 <title>Document</title>
 
 <style>
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 body {
-	margin: 25px 0px 25px;
+	margin: 30px 0px 20px;
+	font-family: 'Orbit-Regular', sans-serif;
 }
 
 .supervisor_nav {
+	width: 100%;
+	max-width: 1000px;
+	box-sizing: border-box;
+	margin: 0 auto;
 	padding: 18px;
 	text-align: center;
-	background: #dfd3c3;
+	background: #ffd954;
 }
 
 .navLink {
@@ -28,8 +40,8 @@ body {
 }
 
 .navLink:hover {
-	border-top: 4px solid #6c5d53;
-	border-bottom: 4px solid #6c5d53;
+	border-top: 4px solid #ffffff;
+	border-bottom: 4px solid #ffffff;
 	padding: 6px 0;
 }
 

@@ -13,8 +13,16 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  margin-left : 15%;
-  margin-right : 15%
+  margin-left : 12.5%;
+  margin-right : 13.5%;
+}
+
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-left : 68%;
 }
 
 /* menu_category */
@@ -39,7 +47,7 @@ select option:hover {
 /* 검색  */
 .search_container {
   position: relative;
-  width: 490px;
+  width: 300px;
   display: flex;
   align-items: center;
 }
@@ -49,21 +57,22 @@ input#search_bar {
   height: 45px;
   padding: 0 20px;
   font-size: 1rem;
+  font-family: 'Orbit-Regular';
   border: 1px solid #D0CFCE;
   outline: none;
   position: relative;
 }
 
 input#search_bar:focus {
-  border: 1px solid #008ABF;
-  color: #008ABF;
+  border: 1px solid #ffd954;
+  color: #000000;
 }
 
 .search_icon {
   position: absolute; 
   top: 50%;
   transform: translateY(-50%);
-  right: 10px; 
+  right: 0px; 
   width: 80px; 
   height: 80px; 
 }
@@ -71,10 +80,10 @@ input#search_bar:focus {
 
 /* 표 */
 body { 
-  background: #ffffff
+  background: #ffffff;
   font-size: 62.5%;
   line-height: 1;
-  color: #585858;
+  color: #000000;
   padding: 22px 10px;
   padding-bottom: 55px;
 }
@@ -88,15 +97,17 @@ body {
   height : 60%;
   overflow-y : auto; 
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 15px;
+  border-bottom: 2px solid #69491a;
 }
 
 #boardlist thead {
   position: sticky;
   top: 0;
   cursor: pointer;
-  background: #c9dff0;
+  background: #69491a;
+  color: #ffffff;
   z-index: 1;
 }
 
@@ -115,12 +126,13 @@ body {
 #boardlist tbody tr td {
   text-align: center;
   padding: 15px 10px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #boardlist tbody tr td.lalign {
   text-align: left;
 }
+
 
 /* 버튼 */
 .bt_wrap a.modify,
@@ -131,33 +143,26 @@ body {
     margin: 5px;
     border-radius: 4px;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #ffffff;
     text-align: center;
-}
-
-.bt_wrap a.modify {
-    background-color: #4CAF50  
+    background-color: #d3d3d3;
 }
 
 .bt_wrap a.modify:hover {
     background-color: #45a049 
 }
 
-.bt_wrap a.delete {
-    background-color: #f44336  
-}
-
 .bt_wrap a.delete:hover {
     background-color: #da190b
 }
 
-.bt_wrap a.on {
-    background-color: #2196F3;
-    margin-top : 15px;
-    margin-left : 50%;
-}
-
 .bt_wrap a.on:hover {
-    background-color: #1976D2
+    background-color: #1a73e8
+}
+.bt_wrap a.on {
+    margin-top : 18px;
+    margin-left : 50%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
 }
