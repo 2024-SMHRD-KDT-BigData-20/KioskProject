@@ -9,6 +9,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
     href="<c:url value='/resources/css/supervisor_insert_style.css' />">
+    
+
 </head>
 <body>
     <form action="${cpath}${empty updating_menu ? '/menu_insert.do' : '/menu_update.do'}" method="post"
@@ -54,17 +56,16 @@
           
 
             <div class="checkbox">
-                    <label><input type="checkbox" name="menu_ages"
-                        value="해당없음">해당없음</label> <label><input type="checkbox"
-                        name="menu_ages[]" value="10대">10대</label><label><input
-                        type="checkbox" name="menu_ages[]" value="20대">20대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="30대">30대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="40대">40대</label><br> <label><input
-                        type="checkbox" name="menu_ages[]" value="50대">50대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="60대">60대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="70대">70대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="80대">80대</label> <label><input
-                        type="checkbox" name="menu_ages[]" value="90대">90대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="0">해당없음</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="10">10대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="20">20대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="30">30대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="40">40대</label><br>
+                    <label><input type="checkbox" name="menu_ages[]" value="50">50대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="60">60대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="70">70대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="80">80대</label>
+                    <label><input type="checkbox" name="menu_ages[]" value="90">90대</label>
             </div>
             <div>
                 <button type="submit">${empty updating_menu ? '등록' : '수정'}</button>

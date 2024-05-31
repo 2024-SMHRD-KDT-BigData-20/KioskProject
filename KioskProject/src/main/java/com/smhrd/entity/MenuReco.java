@@ -9,13 +9,23 @@ public class MenuReco {
 	private int total_sales;
 	private String menu_name_kor;
 
-	public MenuReco(int menu_idx, int reco_check, int reco_ages, int menu_sales, int total_sales, String menu_name_kor) {
+	public MenuReco(int menu_idx, int reco_check, int reco_ages, int menu_sales, int total_sales,
+			String menu_name_kor) {
 		super();
 		this.menu_idx = menu_idx;
 		this.reco_check = reco_check;
 		this.reco_ages = reco_ages;
 		this.menu_sales = menu_sales;
 		this.total_sales = total_sales;
+	}
+
+	public MenuReco(int menu_idx, int reco_check, int reco_ages, int menu_sales, String menu_name_kor) {
+		super();
+		this.menu_idx = menu_idx;
+		this.reco_check = reco_check;
+		this.reco_ages = reco_ages;
+		this.menu_sales = menu_sales;
+		this.menu_name_kor = menu_name_kor;
 	}
 
 	public MenuReco(int menu_idx, int total_sales, String menu_name_kor) {

@@ -21,17 +21,18 @@
 					<th class="menu_idx"><span>번호</span></th>
 					<th class="menu_category"><span>분류 </span></th>
 					<th class="menu_name_kor"><span>메뉴(한글)</span></th>
-					<th class="menu_price"><span>가격</span></th>
 					<th class="menu_reco_check"><span>추천 여부</span></th>
 				</tr>
 			</thead>
-			<tbody>
+			
+			<tbody id="recoboard">
+			<!-- rList 삽입될 곳 -->
+			
 				<c:forEach items="${menu_search_result }" var="m">
 				<tr>
 						<td class="menu_idx">${m.menu_idx }</td>
 						<td class="menu_category">${m.menu_category }</td>
 						<td class="menu_name_kor">${m.menu_name_kor }</td>
-						<td class="menu_price">${m.menu_price }</td>
 						<td class="menu_reco_check"></td>
 						<td class="bt_wrap">
 							<a class="modify"

@@ -12,5 +12,11 @@
         LIMIT 10
     </select>
     
+    <!-- MenuReco 내용 로딩 & menu_idx 조인해서 menu_name_kor까지 로딩 -->
+    <select id="load_reco" resultType="com.smhrd.entity.MenuReco">
+        SELECT r.menu_idx, m.menu_category, m.menu_name_kor, r.reco_check, r.reco_ages, r.menu_sales
+        FROM menu_reco r
+        JOIN menu m ON r.menu_idx = m.menu_idx
+    </select>
     
 </mapper>
