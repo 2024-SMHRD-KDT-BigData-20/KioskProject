@@ -31,10 +31,10 @@ public class MenuController {
 		return "supervisor_1_PM";
 	}
 
-	// 메뉴 등록 페이지 반환
+	// 메뉴 등록/수정 페이지 반환
 	@RequestMapping("/menu_insert_form.do")
 	public String menu_insert_form() {
-		return "supervisor_1_PM_insert_form";
+		return "supervisor_1_PM_form";
 	}
 
 	// 메뉴 등록
@@ -48,7 +48,7 @@ public class MenuController {
 			if (!file.isEmpty()) {
 				byte[] bytes = file.getBytes();
 				System.out.println("Received file: " + file.getOriginalFilename() + ", size: " + bytes.length);
-				
+
 				Menu menu = new Menu();
 				menu.setMenu_name_eng(menuNameEng);
 				menu.setMenu_name_kor(menuNameKor);
@@ -78,19 +78,53 @@ public class MenuController {
 		return "redirect:/menu_list.do";
 	}
 
-	// 메뉴 수정 페이지 반환
+	// 메뉴 수정
+	@RequestMapping("/menu_update.do")
+	public String menu_update(@RequestParam("menu_name_eng") String menuNameEng,
+			@RequestParam("menu_name_kor") String menuNameKor, @RequestParam("menu_category") String menuCategory,
+			@RequestParam("menu_price") int menuPrice, @RequestParam("menu_img") MultipartFile file,
+			@RequestParam(value = "menu_ages[]", required = false) String[] menuAges, Model model) {
+
+		try {
+			if (!file.isEmpty()) {
+				byte[] bytes = file.getBytes();
+				System.out.println("Received file: " + file.getOriginalFilename() + ", size: " + bytes.length);
+
+				Menu menu = new Menu();
+				menu.setMenu_name_eng(menuNameEng);
+				menu.setMenu_name_kor(menuNameKor);
+				menu.setMenu_category(menuCategory);
+				menu.setMenu_price(menuPrice);
+				menu.setMenu_img(bytes);
+
+				if (menuAges != null) {
+					String ages = String.join(",", menuAges); // 배열을 쉼표로 구분된 문자열로 변환
+					System.out.println("menuAges: " + menuAges);
+					System.out.println("ages: " + ages);
+					menu.setMenu_ages(ages);
+				} else {
+					menu.setMenu_ages("");
+					System.out.println("menuAges: " + menuAges);
+				}
+
+				m_mapper.menu_update(menu);
+				model.addAttribute("message", "Menu and file uploaded successfully!");
+			} else {
+				model.addAttribute("message", "File is empty!");
+			}
+		} catch (IOException e) {
+			model.addAttribute("message", "Failed to upload file: " + e.getMessage());
+			e.printStackTrace(); // 로그 출력
+		}
+		return "redirect:/menu_list.do";
+	}
+
+	// 메뉴 등록/수정 페이지 반환
 	@RequestMapping("/menu_update_form.do/{menu_idx}")
 	public String menu_update_form(@PathVariable("menu_idx") int menu_idx, Model model) {
 		Menu updating_menu = m_mapper.menu_select_one(menu_idx);
 		model.addAttribute("updating_menu", updating_menu);
-		return "supervisor_1_PM_update_form";
-	}
-
-	// 메뉴 수정
-	@RequestMapping("/menu_update.do")
-	public String menu_update(Menu menu) {
-		m_mapper.menu_update(menu);
-		return "redirect:/menu_list.do";
+		return "supervisor_1_PM_form";
 	}
 
 	// 메뉴 삭제

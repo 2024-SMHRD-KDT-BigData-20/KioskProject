@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="userName" value="${sessionScope.logined_emp.emp_name}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -63,7 +65,7 @@ a.logout {
 			class="navLink" href="${cpath}/member_list.do">회원관리</a> <a
 			class="navLink" href="${cpath}/emp_list.do">하위 관리자 관리</a> <a
 			class="navLink" href="${cpath}/supervisor_4_Stat.do">판매량 통계</a> <a
-			class="logout" href="${cpath}/emp_logout.do">로그아웃</a>
+			class="logout" href="${cpath}/emp_logout.do">${userName } 로그아웃</a>
 	</nav>
 </body>
 </html>
