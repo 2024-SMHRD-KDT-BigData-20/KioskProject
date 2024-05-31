@@ -25,8 +25,11 @@ public class StatRestController {
 	
 	// menu_reco 테이블 내용 로딩
 	@GetMapping("/load_reco")
-	public List<String> load_reco() {
-		List<String> reco = r_mapper.load_reco();
+	public List<MenuReco> load_reco() {
+		/* 일반적인 경우에는 Board 객체로 바로 묶을 수 있는데
+		 * @RequestBody MenuReco menuReco
+		 * JSON으로 변환된 데이터는 @RequestBody가 필요 (가져오면 바로 묶어줄게~) */
+		List<MenuReco> reco = r_mapper.load_reco();
 		return reco;
 	}
 }

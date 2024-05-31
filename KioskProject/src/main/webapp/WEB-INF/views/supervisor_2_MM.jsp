@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
+<c:set var="userRole" value="${sessionScope.logined_emp.emp_auth}" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>

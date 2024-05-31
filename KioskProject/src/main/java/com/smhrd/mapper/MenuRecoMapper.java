@@ -11,6 +11,6 @@ public interface MenuRecoMapper {
 
 	List<MenuReco> load_sales();
 
-	List<String> load_reco();
+	List<MenuReco> load_reco();
 
 }
