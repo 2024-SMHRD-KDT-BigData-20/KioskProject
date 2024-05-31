@@ -64,14 +64,16 @@
                 <input type="text" id="menu_price" name="menu_price"
                     value="${not empty updating_menu ? updating_menu.menu_price : ''}" required>
 				</div>
-				<div>
+				 <div class="container1">
 					<label class= "label_tit" for="menu_img">이미지</label>
+					<div class="">
                     <input type="file" id="menu_img" name="menu_img" required>
                 </div>
+                </div>
           
-
-            <div class="checkbox">
+            <div class = "container">
             	<label class= "label_tit" for="menu_age">추천연령대</label>
+ 					 <div class="checkbox">
                     <label><input type="checkbox" name="menu_ages[]" value="0">해당없음</label>
                     <label><input type="checkbox" name="menu_ages[]" value="10">10대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="20">20대</label>
@@ -82,6 +84,7 @@
                     <label><input type="checkbox" name="menu_ages[]" value="70">70대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="80">80대</label>
                     <label><input type="checkbox" name="menu_ages[]" value="90">90대</label>
+            </div>
             </div>
             <div>
                 <button type="submit">${empty updating_menu ? '등록' : '수정'}</button>

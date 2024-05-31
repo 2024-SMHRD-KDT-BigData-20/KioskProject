@@ -18,6 +18,19 @@
             font-size: 18px;
         }
         
+        .container,
+        .container1 {
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		  width : 610;
+		  padding-top: 20px;
+		}
+		
+		.container1 {
+		  margin-right : 140px; 
+		}
+        
         .label_tit{
         color: #69491a;
     	font-size: 16px; 
@@ -32,11 +45,9 @@
         .label_tit[for="menu_age"]{
         padding: 0px;
         }
-        
         .label_tit[for="menu_img"]{
         padding: 0px 15px;
         }
-        
         .wrap {
             margin-top: 80px;
             margin-bottom: 50px;
@@ -50,28 +61,35 @@
 
         input[type=text] {
             width: 400px;
-            height: 50px;
+            height: 40px;
             margin: 20px 50px 0;
             text-align: center;
             border-radius: 10px;
             border: 1px solid lightgrey;
             color: #000000;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 15px;
             box-sizing: border-box;
         }
         input[type=text]:focus {
             border: 1px solid #000000;
             box-shadow: 0 0 3px #000000;
             outline: none;
-            font-size: 18px;
+            font-size: 15px;
         }
         input[type=file] {
             width: calc(100% - 20px);
-            margin: 20px 50px;
+            margin: 0px 50px;
             font-size: 15px;
             box-sizing: border-box;
         }
+        .radio label,
+        .checkbox label{       
+		    cursor: pointer;
+		    display: inline-block;
+		    font-size: 17px;
+		    padding: 5px 10px 5px 20px;
+		 }
         button {
             border: 1px solid transparent;
             border-radius: 50px;
@@ -88,10 +106,3 @@
             background: #4e4e4e;
         }
         
-        .radio label,
-        .checkbox label{       
-		    cursor: pointer;
-		    display: inline-block;
-		    font-size: 17px;
-		    padding: 5px 10px 5px 20px;
-		 }
