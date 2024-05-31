@@ -21,7 +21,7 @@
 <!-- 헤더 -->
 <%@ include file="supervisor_nav.jsp"%>
 
-	<div class="container">
+	<div class="container3">
 		<div class="search">
 		<form class="search_container" action="${cpath }/emp_search.do" method="get">
 			<input type="text" id="search_bar" placeholder="이름 검색">
