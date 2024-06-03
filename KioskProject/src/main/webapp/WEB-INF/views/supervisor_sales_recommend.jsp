@@ -9,8 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<%-- <link rel="stylesheet" href="<c:url value='/resources/css/supervisor_recoboard_style.css' />"> --%>
+<link rel="stylesheet" href="<c:url value='/resources/css/supervisor_recoboard_style.css' />">
 <title>Insert title here</title>
+
+<style type="text/css">
+.modify-btns {
+	display: inline-block;
+}
+
+.modify-btns button {
+	margin: 0 2px;
+}
+</style>
 </head>
 <body>
 
@@ -70,20 +80,34 @@
 			rList += '<td>'+ obj.menu_idx + '</td>';
 			rList += '<td>'+ obj.menu_name_kor + '</td>';
 			rList += '<td>'+ obj.reco_ages + '</td>';
-			rList += '<td>'+ obj.reco_check + '</td>';
-			rList += '<td><a class="modify" href="javascript:show_update_reco_btn(' + obj.menu_idx + ');">수정</a></td>';
+			rList += '<td>'+ obj.reco_check;
+            rList += '&nbsp;&nbsp;<a class="modify" href="javascript:update_reco_check(' + obj.menu_idx + ', ' + obj.reco_ages + ', 1);">O</a>';
+            rList += '&nbsp;<a class="modify" href="javascript:update_reco_check(' + obj.menu_idx + ', ' + obj.reco_ages + ', 0);">X</a></td>';
 			rList += '<tr>';
 		});
 		
 		$("#recoboard").html(rList);
 	}
 	
-	function show_update_reco_btn() {
-		/* 작성해야 함 */
+	
+	function update_reco_check(menu_idx, reco_ages, value) {
+		$.ajax({
+			url: cpath + '/update_reco_check', // 서버의 엔드포인트 설정
+			type: 'post',
+			data: JSON.stringify({ menu_idx: menu_idx, reco_ages: reco_ages, reco_check: value }),
+			contentType: 'application/json',
+			success: function(response) {
+				console.log(response);
+				load_reco(); // 성공 시 레코보드 다시 로딩
+			},
+			error: function(xhr, status, error) {
+				console.error("추천 여부 변경 실패: " + error);
+				console.error("상태: " + status);
+				console.error(xhr.responseText);
+			}
+		});
 	}
-	
-	
-	
+
 	
 	</script>
 </body>

@@ -8,9 +8,9 @@
     </select>
     
     <!-- 메뉴 등록 -->
-    <insert id="menu_insert" parameterType="com.smhrd.entity.Menu">
-        insert into menu (menu_name_eng, menu_name_kor, menu_category, menu_price, menu_img, menu_ages)
-		values (#{menu_name_eng}, #{menu_name_kor}, #{menu_category}, #{menu_price}, #{menu_img}, #{menu_ages})
+    <insert id="menu_insert" parameterType="com.smhrd.entity.Menu" useGeneratedKeys="true" keyProperty="menu_idx">
+        insert into menu (menu_name_eng, menu_name_kor, menu_category, menu_price, menu_img)
+		values (#{menu_name_eng}, #{menu_name_kor}, #{menu_category}, #{menu_price}, #{menu_img})
     </insert>
     
     <!-- 메뉴 하나 로딩 -->
@@ -21,7 +21,7 @@
     <!-- 메뉴 수정 -->
     <update id="menu_update" parameterType="com.smhrd.entity.Menu">
         update menu
-        set menu_name_eng=#{menu_name_eng}, menu_name_kor=#{menu_name_kor}, menu_category=#{menu_category}, menu_price=#{menu_price}, menu_ages=#{menu_ages}
+        set menu_name_eng=#{menu_name_eng}, menu_name_kor=#{menu_name_kor}, menu_category=#{menu_category}, menu_price=#{menu_price}
         where menu_idx=#{menu_idx}
     </update>
     
@@ -53,9 +53,6 @@
     	select * from menu
     	where menu_category = #{menu_category}
 	</select>
+	
 
-    <!-- 특정 메뉴의 이미지만 로딩 
-    <select id="get_menu_image" parameterType="int" resultType="byte[]">
-        SELECT menu_img FROM menu WHERE menu_idx = #{menu_idx}
-    </select> -->
 </mapper>
