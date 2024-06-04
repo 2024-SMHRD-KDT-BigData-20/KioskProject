@@ -30,7 +30,7 @@
 		<form action="${cpath}/menu_categorized_result.do" method="get">
 			<select name="menu_category" id="menu_category">
 				<!-- 이 공간에 menu_categories() 함수를 통해 option 태그 삽입 -->
-			</select>
+			</select> 
 		</form>
 
 		<div class="search">
