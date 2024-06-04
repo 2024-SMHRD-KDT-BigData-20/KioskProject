@@ -19,4 +19,6 @@ public interface MenuRecoMapper {
 	void insert_age_data(MenuReco menuReco);
 
 	void delete_age_data(int menu_idx);
+
+	List<MenuReco> load_reco_ages(int menu_idx);
 }
