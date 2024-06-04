@@ -22,9 +22,7 @@
         .container,
         .container1 {
 		  display: flex;
-		  align-items: center;
-		  justify-content: space-between;
-		  width : 610;
+		  align-items: center;  
 		  padding-top: 20px;
 		}
 		
