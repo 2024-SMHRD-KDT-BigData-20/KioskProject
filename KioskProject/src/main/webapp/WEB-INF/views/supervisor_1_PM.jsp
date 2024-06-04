@@ -94,6 +94,5 @@
 			<a class="on" href="javascript:go_insert_menu_form();">등록</a>
 		</c:if>
 	</div>
-
 </body>
 </html>
