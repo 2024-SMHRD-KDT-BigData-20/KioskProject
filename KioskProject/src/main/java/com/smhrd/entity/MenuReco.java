@@ -28,6 +28,19 @@ public class MenuReco {
 		this.menu_name_kor = menu_name_kor;
 	}
 
+	public MenuReco(int menu_idx, int reco_check) {
+		super();
+		this.menu_idx = menu_idx;
+		this.reco_check = reco_check;
+	}
+
+	public MenuReco(int menu_idx, int reco_check, int reco_ages) {
+		super();
+		this.menu_idx = menu_idx;
+		this.reco_check = reco_check;
+		this.reco_ages = reco_ages;
+	}
+
 	public MenuReco(int menu_idx, int total_sales, String menu_name_kor) {
 		super();
 		this.menu_idx = menu_idx;

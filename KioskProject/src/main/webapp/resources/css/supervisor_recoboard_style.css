@@ -1,77 +1,178 @@
 @charset "UTF-8";
 
 body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 190vh;
-    margin: 0;
+  background: #ffffff;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #000000;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+/* 전체 레이아웃 */
+.container {
+  display: flex;
+  height: 80vh;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 10px;
+}
+
+.right {
+  overflow-y: auto;
+}
+
+/* menu_category + 검색  */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-left: 12.5%;
+  margin-right: 13.5%;
+}
+
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-left: 68%;
+}
+
+/* menu_category */
+select {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+select option:checked {
+  background-color: #ddd;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #f2f2f2;
+}
+
+/* 검색 */
+.search_container {
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+input#search_bar {
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-family: 'Orbit-Regular';
+  border: 1px solid #D0CFCE;
+  outline: none;
+  position: relative;
+}
+
+input#search_bar:focus {
+  border: 1px solid #ffd954;
+  color: #000000;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+/* 표 */
 #wrapper {
-    width: 100%;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
+#boardlist {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #69491a;
 }
 
-table thead tr {
-    background-color: #f2f2f2;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
+#boardlist thead {
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  background: #69491a;
+  color: #ffffff;
+  z-index: 1;
 }
 
-table th, table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
+#boardlist thead tr th {
+  font-weight: bold;
+  padding: 8px 24px; /* Adjusted padding to reduce height */
+  padding-left: 42px;
+  white-space: nowrap;
 }
 
-.menu_idx, .menu_category, .menu_name_kor, .menu_price, .menu_reco_check {
-    width: 20%;
+#boardlist thead tr th span {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 
-.bt_wrap {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+#boardlist tbody tr td {
+  text-align: center;
+  padding: 10px 8px; /* Adjusted padding to reduce height */
+  font-size: 14px;
 }
 
-a.modify, a.delete {
-    padding: 8px 12px;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    background-color: #007bff;
-    transition: background-color 0.3s ease;
+#boardlist tbody tr td.lalign {
+  text-align: left;
 }
 
-a.delete {
-    background-color: #dc3545;
+/* 버튼 */
+.bt_wrap a.modify,
+.bt_wrap a.delete,
+.bt_wrap a.on {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  background-color: #d3d3d3;
 }
 
-a.modify:hover {
-    background-color: #0056b3;
+.bt_wrap a.modify:hover {
+  background-color: #45a049;
 }
 
-a.delete:hover {
-    background-color: #c82333;
+.bt_wrap a.delete:hover {
+  background-color: #da190b;
 }
 
-/* Additional styles for responsive design */
-@media (max-width: 768px) {
-    table, th, td {
-        font-size: 14px;
-    }
+.bt_wrap a.on:hover {
+  background-color: #1a73e8;
+}
 
-    .menu_idx, .menu_category, .menu_name_kor, .menu_price, .menu_reco_check {
-        width: 100%;
-    }
+.bt_wrap a.on {
+  margin-top: 18px;
+  margin-left: 50%;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
 }

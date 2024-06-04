@@ -4,9 +4,11 @@
 
 	<!-- 총 판매량 -->
 	<select id="load_sales" resultType="com.smhrd.entity.MenuReco">
-		SELECT m.menu_idx, m.menu_name_kor, SUM(r.menu_sales) AS total_sales
+		SELECT m.menu_idx,
+		m.menu_name_kor, SUM(r.menu_sales) AS total_sales
 		FROM menu_reco r
-		JOIN menu m ON r.menu_idx = m.menu_idx
+		JOIN
+		menu m ON r.menu_idx = m.menu_idx
 		GROUP BY m.menu_idx, m.menu_name_kor
 		ORDER BY total_sales DESC
 		LIMIT 10
@@ -14,10 +16,44 @@
 
 	<!-- MenuReco 내용 로딩 & menu_idx 조인해서 menu_name_kor까지 로딩 -->
 	<select id="load_reco" resultType="com.smhrd.entity.MenuReco">
-		SELECT r.menu_idx, m.menu_category, m.menu_name_kor, r.reco_check,
-		r.reco_ages, r.menu_sales
+		SELECT r.menu_idx,
+		m.menu_category, m.menu_name_kor, r.reco_check,
+		r.reco_ages,
+		r.menu_sales
 		FROM menu_reco r
 		JOIN menu m ON r.menu_idx = m.menu_idx
 	</select>
+
+	<!-- reco_check 업데이트 -->
+	<update id="update_reco_check" parameterType="map">
+		UPDATE menu_reco
+		SET reco_check = #{reco_check}
+		WHERE menu_idx = #{menu_idx} AND
+		reco_ages = #{reco_ages}
+	</update>
+
+	<!-- menu_reco 전연령대 삽입 -->
+	<insert id="insert_age_data"
+		parameterType="com.smhrd.entity.MenuReco">
+		insert into menu_reco (menu_idx, reco_check, reco_ages,
+		menu_sales)
+		values (#{menu_idx}, #{reco_check}, #{reco_ages},
+		#{menu_sales})
+	</insert>
+
+	<!-- menu_reco 튜플 삭제 -->
+	<delete id="delete_age_data" parameterType="int">
+		DELETE FROM menu_reco
+		WHERE menu_idx = #{menu_idx}
+	</delete>
+
+	<!-- reco_ages 로딩 -->
+	<select id="load_reco_ages" parameterType="int"
+		resultType="com.smhrd.entity.MenuReco">
+		SELECT reco_ages, reco_check
+		FROM menu_reco
+		WHERE menu_idx = #{menu_idx}
+	</select>
+
 
 </mapper>

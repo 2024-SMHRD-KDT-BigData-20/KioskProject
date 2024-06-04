@@ -18,6 +18,8 @@ public interface MenuMapper {
 	void menu_update(Menu menu);
 
 	void menu_delete(int menu_idx);
+	
+	void delete_age_data(int menu_idx);
 
 	List<Menu> menu_search(String menu_search_text);
 	
@@ -26,4 +28,6 @@ public interface MenuMapper {
 	List<Menu> menu_categorize(String menu_category);
 	
 	byte[] get_menu_image(int menu_idx);
+
+	void insert_age_data(int menuIdx, int parseInt);
 }
