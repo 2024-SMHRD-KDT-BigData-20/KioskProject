@@ -39,7 +39,9 @@ public class MenuController {
 
     // 메뉴 등록 페이지 반환
     @RequestMapping("/menu_insert_form.do")
-    public String menu_insert_form() {
+    public String menu_insert_form(Model model) {
+    	model.addAttribute("categories", new String[]{"커피", "티", "에이드/주스", "스무디/프라페", "디카페인", "음료", "푸드"});
+    	model.addAttribute("ages", new String[]{"10~20대", "30~40대", "50대 이상"});
         return "supervisor_1_PM_form";
     }
 

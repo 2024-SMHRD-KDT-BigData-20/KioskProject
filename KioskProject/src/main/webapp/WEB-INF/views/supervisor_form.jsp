@@ -98,7 +98,7 @@ body {
                 </div>
             </div>
 
-            <%-- <div class="container">
+            <div class="container">
                 <label class="label_tit" for="menu_age">추천연령대</label>
                 <div class="checkbox">
                     <c:forEach var="age" items="${ages}">
@@ -109,7 +109,7 @@ body {
                         </label>
                     </c:forEach>
                 </div>
-            </div> --%>
+            </div>
             
             <div>
                 <button type="submit">${empty updating_menu ? '등록' : '수정'}</button>
