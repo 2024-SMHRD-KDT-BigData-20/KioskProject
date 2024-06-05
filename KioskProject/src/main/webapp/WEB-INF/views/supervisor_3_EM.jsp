@@ -86,6 +86,7 @@
 					</c:forEach>
 				</tbody>
 			</table>
+			<div class="fixed-bottom-border"></div>
 		</div>
 
 

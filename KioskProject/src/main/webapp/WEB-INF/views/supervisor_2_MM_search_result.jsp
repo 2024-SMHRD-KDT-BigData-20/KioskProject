@@ -71,6 +71,7 @@
 				</c:forEach>
 				</tbody>
 				</table>
+				<div class="fixed-bottom-border"></div>
 			</div>
 
 			<div class="bt_wrap">

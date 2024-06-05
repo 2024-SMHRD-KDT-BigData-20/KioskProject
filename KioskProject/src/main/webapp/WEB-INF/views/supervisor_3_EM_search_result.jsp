@@ -64,6 +64,7 @@
 				</c:forEach>
 			</tbody>
 			</table>
+			<div class="fixed-bottom-border"></div>
 			<div class="bt_wrap">
 				<a class="on" href="javascript:go_insert_emp_form();">등록</a>
 			</div>
