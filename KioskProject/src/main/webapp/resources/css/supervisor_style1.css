@@ -79,13 +79,6 @@ input#search_bar:focus {
 
 
 /* 표 */
-body { 
-  background: #ffffff;
-  font-size: 62.5%;
-  color: #000000;
-  padding: 22px 10px;
-  padding-bottom: 55px;
-}
 
 #wrapper {
   margin-top: 20px;
@@ -93,21 +86,16 @@ body {
 
 #boardlist {
   width: 75%;
-  height : 60%;
-  overflow-y : auto; 
   margin: 0 auto;
   font-size: 16px;
-  margin-bottom: 15px;
   border-collapse: collapse;
 }
 
 #boardlist thead {
   position: sticky;
   top: 0;
-  cursor: pointer;
   background: #69491a;
   color: #ffffff;
-  z-index: 1;
 }
 
 #boardlist thead tr th { 
