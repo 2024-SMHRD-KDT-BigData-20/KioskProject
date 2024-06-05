@@ -3,9 +3,6 @@ package com.smhrd.controller;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -103,7 +100,7 @@ public class MenuController {
     }
 
     // 메뉴 수정
-    @RequestMapping("/menu_update.do")
+    @RequestMapping(value = "/menu_update.do", method = RequestMethod.POST)
     public String menu_update(@RequestParam("menu_idx") int menuIdx, @RequestParam("menu_name_eng") String menuNameEng,
             @RequestParam("menu_name_kor") String menuNameKor, @RequestParam("menu_category") String menuCategory,
             @RequestParam("menu_price") int menuPrice, @RequestParam("menu_img") MultipartFile file,

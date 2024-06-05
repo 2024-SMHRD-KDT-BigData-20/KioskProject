@@ -94,22 +94,23 @@ body {
                     <c:if test="${not empty menuImgBase64}">
                         <img src="data:image/jpeg;base64,${menuImgBase64}" alt="${updating_menu.menu_name_eng}" class="inline-elements" style="width: 80px; height: 80px;">
                     </c:if>
-                    <input type="file" id="menu_img" name="menu_img" class="inline-elements" ${empty updating_menu ? 'required' : ''}>
+                    <input type="file" id="menu_img" name="menu_img" class="inline-elements">
                 </div>
             </div>
 
-            <div class="container">
+            <%-- <div class="container">
                 <label class="label_tit" for="menu_age">추천연령대</label>
                 <div class="checkbox">
                     <c:forEach var="age" items="${ages}">
                         <label>
                             <input type="checkbox" name="menu_ages[]" value="${age}"
-
+                                <c:if test="${fn:contains(updating_menu.reco_ages, age)}">checked</c:if>
                             >${age}
                         </label>
                     </c:forEach>
                 </div>
-            </div>
+            </div> --%>
+            
             <div>
                 <button type="submit">${empty updating_menu ? '등록' : '수정'}</button>
             </div>

@@ -21,7 +21,7 @@
     <!-- 메뉴 수정 -->
     <update id="menu_update" parameterType="com.smhrd.entity.Menu">
         update menu
-        set menu_name_eng=#{menu_name_eng}, menu_name_kor=#{menu_name_kor}, menu_category=#{menu_category}, menu_price=#{menu_price}
+        set menu_name_eng=#{menu_name_eng}, menu_name_kor=#{menu_name_kor}, menu_category=#{menu_category}, menu_price=#{menu_price}, menu_img=#{menu_img}
         where menu_idx=#{menu_idx}
     </update>
     
