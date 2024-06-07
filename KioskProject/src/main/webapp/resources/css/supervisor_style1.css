@@ -77,7 +77,6 @@ input#search_bar:focus {
   height: 80px; 
 }
 
-
 /* 표 */
 
 #wrapper {
@@ -105,9 +104,11 @@ input#search_bar:focus {
 }
 
 #boardlist thead tr th span { 
+  display: inline-block;
   padding-right: 20px;
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  white-space: nowrap;
 }
 
 #boardlist tbody tr td {
