@@ -91,9 +91,9 @@
 	    function getRecoCheck(reco_check) {
 	    	switch (reco_check) {
 	    		case 0:
-	    			return ' O ';
-	    		case 1:
 	    			return ' - ';
+	    		case 1:
+	    			return ' O ';
 	    	}
 	    }
 		
