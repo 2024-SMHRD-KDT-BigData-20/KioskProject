@@ -75,13 +75,35 @@
 		
 		var rList = '';
 		
+	    function getAgeRange(reco_ages) {
+	        switch (reco_ages) {
+	            case 0:
+	                return '10~20대';
+	            case 1:
+	                return '30~40대';
+	            case 2:
+	                return '50대 이상';
+	            default:
+	                return 'Unknown';
+	        }
+	    }
+	    
+	    function getRecoCheck(reco_check) {
+	    	switch (reco_check) {
+	    		case 0:
+	    			return ' O ';
+	    		case 1:
+	    			return ' - ';
+	    	}
+	    }
+		
 		$.each(recoData, (index, obj) => {
 			rList += '<tr>';
 			rList += '<td>'+ obj.menu_idx + '</td>';
 			rList += '<td>'+ obj.menu_name_kor + '</td>';
-			rList += '<td>'+ obj.reco_ages + '</td>';
-			rList += '<td>'+ obj.reco_check;
-            rList += '&nbsp;&nbsp;<a class="modify" href="javascript:update_reco_check(' + obj.menu_idx + ', ' + obj.reco_ages + ', 1);">O</a>';
+			rList += '<td>'+ getAgeRange(obj.reco_ages) + '</td>';
+			rList += '<td>'+ getRecoCheck(obj.reco_check);
+            rList += '&nbsp;&nbsp;&nbsp;<a class="modify" href="javascript:update_reco_check(' + obj.menu_idx + ', ' + obj.reco_ages + ', 1);">O</a>';
             rList += '&nbsp;<a class="modify" href="javascript:update_reco_check(' + obj.menu_idx + ', ' + obj.reco_ages + ', 0);">X</a></td>';
 			rList += '<tr>';
 		});
