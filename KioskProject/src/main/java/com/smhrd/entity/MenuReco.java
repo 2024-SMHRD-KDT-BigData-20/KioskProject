@@ -4,7 +4,7 @@ public class MenuReco {
 
 	private int menu_idx;
 	private int reco_check;
-	private int reco_ages;
+	private int reco_ages; // 0: 10~20대, 1: 30~40대, 2: 50대 이상
 	private int menu_sales;
 	private int total_sales;
 	private String menu_name_kor;

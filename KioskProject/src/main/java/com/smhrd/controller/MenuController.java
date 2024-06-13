@@ -44,7 +44,7 @@ public class MenuController {
     	model.addAttribute("ages", new String[]{"10~20대", "30~40대", "50대 이상"});
         return "supervisor_1_PM_form";
     }
-
+    
     // 메뉴 등록
     @RequestMapping(value = "/menu_insert.do", method = RequestMethod.POST)
     public String menu_insert(@RequestParam("menu_name_eng") String menuNameEng,
@@ -66,7 +66,8 @@ public class MenuController {
                 int menuIdx = menu.getMenu_idx(); // 삽입 후 menu_idx 가져오기
 
                 // 연령대 데이터 자동 삽입
-                insert_age_data(menuIdx, menuAges);
+                int[] indices = convertAgesToIndices(menuAges);
+                insert_age_data(menuIdx, indices);
 
                 model.addAttribute("message", "메뉴와 파일이 성공적으로 업로드되었습니다!");
             } else {
@@ -79,25 +80,18 @@ public class MenuController {
         return "redirect:/menu_list.do";
     }
 
-    private void insert_age_data(int menuIdx, String[] menuAges) {
-        int[] ageGroups = { 0, 1, 2 };
-        for (int ageGroup : ageGroups) {
-            int recoCheck = 0;
-            if (menuAges != null) {
-                for (String age : menuAges) {
-                    if ((age.equals("10~20대") && ageGroup == 0) || (age.equals("30~40대") && ageGroup == 1)
-                            || (age.equals("50대 이상") && ageGroup == 2)) {
-                        recoCheck = 1;
-                        break;
-                    }
-                }
+    // 메뉴 연령대 데이터 삽입
+    private void insert_age_data(int menuIdx, int[] indices) {
+        if (indices != null) {
+            for (int ageIdx : indices) {
+                MenuReco menuReco = new MenuReco();
+                menuReco.setMenu_idx(menuIdx);
+                menuReco.setMenu_sales(0);
+                menuReco.setReco_ages(ageIdx);
+                menuReco.setReco_check(1); // 기본적으로 체크되어 있다고 가정
+
+                r_mapper.insert_age_data(menuReco);
             }
-            MenuReco menuReco = new MenuReco();
-            menuReco.setMenu_idx(menuIdx);
-            menuReco.setReco_check(recoCheck);
-            menuReco.setReco_ages(ageGroup);
-            menuReco.setMenu_sales(0);
-            r_mapper.insert_age_data(menuReco);
         }
     }
 
@@ -126,7 +120,7 @@ public class MenuController {
             r_mapper.delete_age_data(menuIdx);
 
             // 새로운 연령대 데이터 삽입
-            insert_age_data(menuIdx, menuAges);
+            insert_age_data(menuIdx, convertAgesToIndices(menuAges)); // 체크박스 값 변환하여 전달
 
             model.addAttribute("message", "Menu and file uploaded successfully!");
         } catch (IOException e) {
@@ -136,7 +130,26 @@ public class MenuController {
         return "redirect:/menu_list.do";
     }
 
-    // 메뉴 수정 페이지 반환
+    // 연령대 문자열을 숫자 인덱스로 변환하는 메소드
+    private int[] convertAgesToIndices(String[] menuAges) {
+        int[] indices = new int[menuAges.length];
+        for (int i = 0; i < menuAges.length; i++) {
+            switch (menuAges[i]) {
+                case "10~20대":
+                    indices[i] = 0;
+                    break;
+                case "30~40대":
+                    indices[i] = 1;
+                    break;
+                case "50대 이상":
+                    indices[i] = 2;
+                    break;
+            }
+        }
+        return indices;
+    }
+
+	// 메뉴 수정 페이지 반환
     @GetMapping("/menu_update_form.do/{menu_idx}")
     public String menu_update_form(@PathVariable("menu_idx") int menu_idx, Model model) {
         Menu updating_menu = m_mapper.menu_select_one(menu_idx);

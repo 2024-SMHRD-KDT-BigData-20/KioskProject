@@ -9,10 +9,9 @@ public class Menu {
 	private String menu_category;
 	private int menu_price;
 	private byte[] menu_img; // 이미지
-	private String menu_ages; // 연령대
 
 	public Menu(int menu_idx, String menu_name_eng, String menu_name_kor, String menu_category, int menu_price,
-			byte[] menu_img, String menu_ages) {
+			byte[] menu_img, int menu_ages) {
 		super();
 		this.menu_idx = menu_idx;
 		this.menu_name_eng = menu_name_eng;
@@ -20,7 +19,6 @@ public class Menu {
 		this.menu_category = menu_category;
 		this.menu_price = menu_price;
 		this.menu_img = menu_img;
-		this.menu_ages = menu_ages;
 	}
 
 	public Menu() {
@@ -80,13 +78,5 @@ public class Menu {
 			return Base64.getEncoder().encodeToString(this.menu_img);
 		}
 		return null;
-	}
-
-	public String getMenu_ages() {
-		return menu_ages;
-	}
-
-	public void setMenu_ages(String menu_ages) {
-		this.menu_ages = menu_ages;
 	}
 }
