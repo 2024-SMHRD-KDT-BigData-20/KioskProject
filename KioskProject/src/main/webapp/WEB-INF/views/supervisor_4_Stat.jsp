@@ -10,6 +10,12 @@
 <title>Document</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
+	body {
+		position: fixed;
+		  width: 100%;
+		  height: 100%;
+		  overflow: hidden;
+	}
     .container {
         display: flex;
         height: 100vh; /* 전체 화면 높이 */
@@ -22,12 +28,16 @@
         flex: 1;
         padding: 10px;
     }
+    .stat_nav {
+    	margin: 30px 0px 20px;
+		font-family: 'Orbit-Regular', sans-serif;
+    }
 </style>
 </head>
 <body>
 
 	<!-- 헤더 -->
-	<%@ include file="supervisor_nav.jsp"%>
+	<div class="stat_nav"><%@ include file="supervisor_nav.jsp"%></div>
 
 	<div class="container">
         <!-- 왼쪽 콘텐츠 -->

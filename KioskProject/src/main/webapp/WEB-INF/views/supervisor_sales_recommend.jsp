@@ -25,7 +25,7 @@
 <body>
 
 	<div id="wrapper">
-		<div style="height: 80vh; width: 40vw; overflow-y: auto">
+		<div style="height: 60vh; width: 40vw; overflow-y: auto">
 			<table id="boardlist"
 				style="width: 30vw; border: 0; cellspacing: 0; cellpadding: 0;">
 				<thead>
