@@ -25,7 +25,7 @@
 <body>
 
 	<div id="wrapper">
-		<div style="height: 60vh; width: 40vw; overflow-y: auto">
+		<div style="height: 75vh; width: auto; overflow-y: auto">
 			<table id="boardlist"
 				style="width: 30vw; border: 0; cellspacing: 0; cellpadding: 0;">
 				<thead>
@@ -41,7 +41,8 @@
 					<!-- rList 삽입될 곳: update_recoboard 함수로 삽입 -->
 
 				</tbody>
-			</table>
+			</table>			
+			<div class="fixed-bottom-border"></div>
 		</div>
 	</div>
 
