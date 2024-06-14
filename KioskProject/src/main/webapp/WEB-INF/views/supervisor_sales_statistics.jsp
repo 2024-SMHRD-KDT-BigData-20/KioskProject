@@ -19,7 +19,7 @@
 <body>
 
 	<div>
-		<canvas id="myChart" style="height:80vh; width:30vw"></canvas>
+		<canvas id="myChart" style="height:60vh; width:30vw"></canvas>
 	</div>
 
 	<script type="text/javascript">
