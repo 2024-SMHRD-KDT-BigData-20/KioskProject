@@ -24,8 +24,7 @@
 </head>
 <body>
 
-	<div id="wrapper">
-		<div style="height: 75vh; width: auto; overflow-y: auto">
+		<div style="height: 500px; width: auto;  margin-right: 120px; margin-top: 50px;">
 			<table id="boardlist"
 				style="width: 30vw; border: 0; cellspacing: 0; cellpadding: 0;">
 				<thead>
@@ -42,9 +41,7 @@
 
 				</tbody>
 			</table>			
-			<div class="fixed-bottom-border"></div>
 		</div>
-	</div>
 
 
 
