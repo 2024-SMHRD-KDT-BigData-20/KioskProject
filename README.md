@@ -1,4 +1,4 @@
-# 🧑‍🦳 FaceMyKiosk (팀명: 편함(PeerNAM: Peer and Next-Generation Age Management))
+# 🧑‍🦳 FaceMyKiosk<br>(팀명: 편함(PeerNAM: Peer and Next-Generation Age Management))
 ![아이콘_FaceMyKiosk](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/d36494ca-fb10-4010-81c3-70cb0a68f958)
 <br><br>
 ## 📌 서비스 소개
@@ -29,10 +29,19 @@
         </td>
     </tr>
     <tr>
+        <td>프레임워크</td>
+        <td>
+            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/PyCharm-000000?style=flat-square&logo=PyCharm&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+    <tr>
         <td>라이브러리</td>
         <td>
-            <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
-            <img src="https://img.shields.io/badge/KakaoMap-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white"/>
+            
+
         </td>
     </tr>
     <tr>
@@ -40,6 +49,7 @@
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
             <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/> 
         </td>
     </tr>
     <tr>
