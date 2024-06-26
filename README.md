@@ -286,6 +286,8 @@
 <br>
 ![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/845c5b2b-badc-4e74-acab-6321f230ed7c)
 <br>
+![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7783ea85-d3b7-4b49-a53a-e8323f51aa35)
+<br>
 - OpenCV의 cv2.VideoCapture(0)를 사용하여 카메라를 사용하면, 현재 서버로 사용하는 노트북의 카메라를 사용<br>
 - 외부 태블릿을 키오스크 화면처럼 사용하는 것이 목적이었기에 HTML5의 getUserMedia API 활용<br>
 - fetch API를 통해 자바스크립트에서 플라스크 서버 측으로 데이터 송수신<br>
