@@ -37,7 +37,7 @@
     <tr>
         <td>프레임워크</td>
         <td>
-            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
             <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>
         </td>
     </tr>
@@ -114,13 +114,15 @@
     <tr>
         <td>
             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9c3e61ce-3edc-4c0d-93a4-0e72031f0b3c" alt="초기 화면">
+        </td>    
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/b71a4985-2e54-425f-9e6f-9220ddeb56bc" alt="얼굴 인식 화면">
         </td>
+    </tr>
+    <tr>
         <td>
             - 서비스 로고
             - 개인정보 수집 및 이용 동의 안내
-        </td>
-        <td>
-            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/b71a4985-2e54-425f-9e6f-9220ddeb56bc" alt="얼굴 인식 화면">
         </td>
         <td>
             - 전면 카메라 활성(getUserMedia API 통해 외부 카메라 사용)
@@ -136,12 +138,14 @@
              <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/a4b20cef-308f-4e27-907c-b6f483f419e6 alt="노멀 모드 메뉴 선택 화면">
         </td>
         <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/4e37822d-d27d-4480-9a4c-f922007258cf" alt="시니어 모드 메뉴 선택 화면">
+        </td>
+    </tr>
+    <tr>
+        <td>
             - 노멀 모드 메뉴 선택 화면
             - 하단 장바구니
             - 우하단 타이
-        </td>
-        <td>
-             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/4e37822d-d27d-4480-9a4c-f922007258cf" alt="시니어 모드 메뉴 선택 화면">
         </td>
         <td>
             - 시니어 모드 메뉴 선택 화면
@@ -156,12 +160,14 @@
              <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7a3270ba-f759-4906-a55c-25c3f69fb0c0" alt="시니어 모드 주문 메뉴 확인 화면">
         </td>
         <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6cd33ebc-c4a3-4377-9b0a-0d8c600c654b" alt="노멀 모드 결제 옵션 선택 화면">
+        </td>
+    </tr>
+    <tr>
+        <td>
             - 상단에 포장/매장 여부 출력
             - 선택한 메뉴 크게 띄워줌
             - 하단에 총 결제할 금액, 추가 메뉴 선택 여부 
-        </td>
-        <td>
-             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6cd33ebc-c4a3-4377-9b0a-0d8c600c654b" alt="노멀 모드 결제 옵션 선택 화면">
         </td>
         <td>
             - 휴대폰 번호 입력 시 스탬프 적립
@@ -182,11 +188,13 @@
              <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7ec27281-74f5-444d-bdca-5dcb05e1a141" alt="관리자 로그인">
         </td>
         <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/3bd5181c-4a9f-4c20-a44a-c72179edfee9" alt="판매량 통계 조회">
+        </td>
+    </tr>
+    <tr>
+        <td>
             - 상위 또는 하위 관리자로 로그인
             - 따로 회원가입 없이 부여받은 아이디로 로그인
-        </td>
-        <td>
-            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/3bd5181c-4a9f-4c20-a44a-c72179edfee9" alt="판매량 통계 조회">
         </td>
         <td>
             - 좌단에 총 판매량 한눈에 시각화(Chart.js)
@@ -201,29 +209,33 @@
             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9ab2aec7-8363-44ac-829a-0fb96d63e757" alt="상품 조회">
         </td>
         <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/8dfba3fc-6f7b-41ff-b131-ba19d1a43814" alt="상품 등록 및 수정">
+        </td>
+    </tr>
+    <tr>
+        <td>
             - 분류에서 카테고리 선택 시 해당 카테고리의 메뉴들만 보여줌
             - 메뉴명 검색 가능(한글명, 영문명)
-        </td>
-        <td>
-            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/8dfba3fc-6f7b-41ff-b131-ba19d1a43814" alt="상품 등록 및 수정">
         </td>
         <td>
             - 이미지 등록 시 바이너리로 변환 후 base64 형태로 인코딩, longblob 타입으로 DB 삽입
         </td>
     </tr>
-    <tr>
+    <tr>`
         <td colspan="2"><strong>○ 회원·하위 관리자 관리 ○</strong></td>
     </tr>
     <tr>
         <td>
             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/c102688d-f199-4100-9878-2433ea1aeae4" alt="회원 조회">
         </td>
+         <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/69b788f7-46a3-4803-b381-3649fa179097" alt="하위 관리자 조회"
+        </td>
+    </tr>
+    <tr>
         <td>
             - 회원 전화번호, 가입일, 스탬프 수 조회
             - 안면 이미지 항목: 현 시점에선 미구현이지만, 추후 개인화 발전 가능성으로 이어질 수 있어 남겨둠
-        </td>
-        <td>
-            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/69b788f7-46a3-4803-b381-3649fa179097" alt="하위 관리자 조회"
         </td>
         <td>
             - 상위 관리자는 하위 관리자의 아이디, 비밀번호 등록·수정·삭제 가능
