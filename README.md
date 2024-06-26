@@ -1,4 +1,4 @@
-![시스템 아키텍처](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/b6d3fa3b-cdc7-4ac3-b41f-882f08557266)# 🧑‍🦳 FaceMyKiosk
+# 🧑‍🦳 FaceMyKiosk
 ## (팀명: 편함(PeerNAM: Peer and Next-Generation Age Management))
 ![아이콘_FaceMyKiosk](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/d36494ca-fb10-4010-81c3-70cb0a68f958)
 <br><br>
