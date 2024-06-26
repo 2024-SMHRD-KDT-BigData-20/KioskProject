@@ -1,5 +1,5 @@
 # 🧑‍🦳 FaceMyKiosk
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(팀명: 편함(PeerNAM: Peer and Next-Generation Age Management))
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(팀명: 편함(PeerNAM: Peer and Next-Generation Age Management))
 ![아이콘_FaceMyKiosk](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/d36494ca-fb10-4010-81c3-70cb0a68f958)
 <br><br>
 
