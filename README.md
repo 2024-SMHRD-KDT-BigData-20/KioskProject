@@ -104,6 +104,7 @@
         </td>
     </tr>
 </table>
+<br><br>
 
 
 ### 화면 구성 - 키오스크 시스템
@@ -176,7 +177,7 @@
         </td>
     </tr>
 </table>
-<br><br>
+<br>
 
 ### 화면 구성 - 관리자 시스템
 <table>
@@ -221,7 +222,7 @@
             - 이미지 등록 시 바이너리로 변환 후 base64 형태로 인코딩, longblob 타입으로 DB 삽입
         </td>
     </tr>
-    <tr>`
+    <tr>
         <td colspan="2"><strong>○ 회원·하위 관리자 관리 ○</strong></td>
     </tr>
     <tr>
@@ -277,3 +278,24 @@
     <td align="center"><a href="https://github.com/yeejongmyung" target='_blank'>github</a></td>
   </tr>
 </table>
+<br><br>
+
+### 트러블슈팅
+
+<b>1. 외부 기기 카메라 사용</b>
+<br>
+![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/845c5b2b-badc-4e74-acab-6321f230ed7c)
+<br>
+- OpenCV의 cv2.VideoCapture(0)를 사용하여 카메라를 사용하면, 현재 서버로 사용하는 노트북의 카메라를 사용<br>
+- 외부 태블릿을 키오스크 화면처럼 사용하는 것이 목적이었기에 HTML5의 getUserMedia API 활용<br>
+- fetch API를 통해 자바스크립트에서 플라스크 서버 측으로 데이터 송수신<br>
+- 서버 측에서 카메라 이미지 캡처 후 저장, openCV의 haarcascade로 얼굴만 크롭함<br>
+- 안면 크롭 이미지를 학습된 연령대 판별 모델로 판별하여, 세션에 연령대 값을 저장한 후 다음 페이지로 리다이렉트<br>
+
+<br>
+<b>2. SSL01</b>
+<br>
+- 태블릿이나 최신 브라우저에서 HTML5의 getUserMedia API를 사용하기 위해서는 HTTPS 프로토콜을 통한 웹사이트 제공이 필요<br>
+- HTTPS 프로토콜을 사용하기 위해 OpenSSL을 사용하였는데, 배포까지 하게 된다면 Let's Encrypt 인증서를 발급받았겠지만, 로컬 개발 환경이므로 외부 서명이 아닌 자체 서명된 OpenSSL 사용<br>
+- 개발 및 테스트가 목적이었기에 Apache HTTPS Server를 HTTPS 서버로 사용하지 않았고, flask 서버 자체를 HTTPS 서버로 직접 사용<br>
+- flask를 서버로 사용하기에 앞서 리버스 프록시 서버로 NginX 설정
