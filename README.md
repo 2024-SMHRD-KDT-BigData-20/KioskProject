@@ -27,11 +27,11 @@
     <tr>
         <td>사용언어</td>
         <td>
-            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"/>
-            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
-            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+            <img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
         </td>
     </tr>
     <tr>
@@ -46,13 +46,13 @@
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
             <img src="https://img.shields.io/badge/PyCharm-000000?style=flat-square&logo=PyCharm&logoColor=white"/>
-            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td>서버환경</td>
         <td>
-            <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
         </td>
     </tr>
     <tr>
@@ -64,8 +64,8 @@
     <tr>
         <td>협업도구</td>
         <td>
-            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/> 
-            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+            <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
         </td>
     </tr>
 </table>
@@ -74,33 +74,33 @@
 ### 설계도
 <table>
     <tr>
-        <td>서비스 아키텍처</td>
+        <td>시스템 아키텍처</td>
         <td>
-            ![시스템 아키텍처](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/14a2610d-8540-45cc-8b55-5ddbe20bfb80)
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/14a2610d-8540-45cc-8b55-5ddbe20bfb80" alt="시스템 아키텍처">
         </td>
     </tr>
     <tr>
         <td>서비스 흐름도(관리자)</td>
         <td>
-            ![서비스 흐름도(관리자)](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/77e4d22f-f6d2-4b99-8d3d-bad6a504c224)
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/77e4d22f-f6d2-4b99-8d3d-bad6a504c224" alt="서비스 흐름도(관리자)">
         </td>
     </tr>
     <tr>
         <td>서비스 흐름도(키오스크)</td>
         <td>
-            ![서비스 흐름도(키오스크)](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7f38536e-2c40-4884-b77a-2e41e33c6e10)
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7f38536e-2c40-4884-b77a-2e41e33c6e10" alt="서비스 흐름도(키오스크)">
         </td>
     </tr>
     <tr>
         <td>유스케이스 다이어그램</td>
         <td>
-            ![USECASE_D](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6642c15b-3a08-422b-8804-fc60242c2461)
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6642c15b-3a08-422b-8804-fc60242c2461" alt="유스케이스 다이어그램">
         </td>
     </tr>
     <tr>
         <td>ER 다이어그램</td>
         <td>
-            ![ER_D](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/769d752d-b28c-4ca8-bc6e-796e9a615e01)
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/769d752d-b28c-4ca8-bc6e-796e9a615e01)" alt="ER 다이어그램">
         </td>
     </tr>
 </table>
@@ -112,19 +112,31 @@
         <td colspan="2"><strong>○ 화면 터치 및 안면 인식 ○</strong></td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9c3e61ce-3edc-4c0d-93a4-0e72031f0b3c)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/b71a4985-2e54-425f-9e6f-9220ddeb56bc)</td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9c3e61ce-3edc-4c0d-93a4-0e72031f0b3c" alt="초기 화면">
+        </td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/b71a4985-2e54-425f-9e6f-9220ddeb56bc" alt="얼굴 인식 화면">
+        </td>
     </tr>
     <tr>
         <td colspan="2"><strong>○ 메뉴 선택 및 주문·결제 ○</strong></td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/a4b20cef-308f-4e27-907c-b6f483f419e6)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/4e37822d-d27d-4480-9a4c-f922007258cf)</td>
+        <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/a4b20cef-308f-4e27-907c-b6f483f419e6 alt="노멀 모드 메뉴 선택 화면">
+        </td>
+        <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/4e37822d-d27d-4480-9a4c-f922007258cf" alt="시니어 모드 메뉴 선택 화면">
+        </td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7a3270ba-f759-4906-a55c-25c3f69fb0c0)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6cd33ebc-c4a3-4377-9b0a-0d8c600c654b)</td>
+        <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7a3270ba-f759-4906-a55c-25c3f69fb0c0" alt="시니어 모드 주문 메뉴 확인 화면">
+        </td>
+        <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/6cd33ebc-c4a3-4377-9b0a-0d8c600c654b" alt="노멀 모드 결제 옵션 선택 화면">
+        </td>
     </tr>
 </table>
 <br>
@@ -132,25 +144,37 @@
 ### 화면 구성 - 관리자 시스템
 <table>
     <tr>
-        <td colspan="2"><strong>○ 관리자 로그인 / 판매량 통 ○</strong></td>
+        <td colspan="2"><strong>○ 관리자 로그인 / 판매량 통계 ○</strong></td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7ec27281-74f5-444d-bdca-5dcb05e1a141)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/3bd5181c-4a9f-4c20-a44a-c72179edfee9)</td>
+        <td>
+             <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/7ec27281-74f5-444d-bdca-5dcb05e1a141" alt="관리자 로그인">
+        </td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/3bd5181c-4a9f-4c20-a44a-c72179edfee9" alt="판매량 통계 조회">
+        </td>
     </tr>
     <tr>
         <td colspan="2"><strong>○ 상품 조회 및 등록·수정 ○</strong></td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9ab2aec7-8363-44ac-829a-0fb96d63e757)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/8dfba3fc-6f7b-41ff-b131-ba19d1a43814)</td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/9ab2aec7-8363-44ac-829a-0fb96d63e757" alt="상품 조회">
+        </td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/8dfba3fc-6f7b-41ff-b131-ba19d1a43814" alt="상품 등록 및 수정">
+        </td>
     </tr>
     <tr>
         <td colspan="2"><strong>○ 회원·하위 관리자 관리 ○</strong></td>
     </tr>
     <tr>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/c102688d-f199-4100-9878-2433ea1aeae4)</td>
-        <td>![image](https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/69b788f7-46a3-4803-b381-3649fa179097)</td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/c102688d-f199-4100-9878-2433ea1aeae4" alt="회원 조회">
+        </td>
+        <td>
+            <img src="https://github.com/2024-SMHRD-KDT-BigData-20/KioskProject/assets/148893093/69b788f7-46a3-4803-b381-3649fa179097" alt="하위 관리자 조회"
+        </td>
     </tr>
 </table>
 <br>
